@@ -15,7 +15,8 @@
 <お店の特徴や場所などが、知りたいときに利用してもらう>
 
 ## 設計書
-<...>
+テーブル定義書
+https://docs.google.com/spreadsheets/d/1C44jM2gMQz5ufUhKNfkAQ4EUEn5ijJvD9vyGJ-oJdWU/edit?usp=sharing
 
 ## 開発環境
 - OS：windows(windows10)
