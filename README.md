@@ -17,6 +17,10 @@
 ## 設計書
 テーブル定義書
 https://docs.google.com/spreadsheets/d/1C44jM2gMQz5ufUhKNfkAQ4EUEn5ijJvD9vyGJ-oJdWU/edit?usp=sharing
+アプリケーション詳細設計
+https://docs.google.com/spreadsheets/d/1KX10e5EkvvvTN65chco3ZTbBdZqb5oN1zOiDQJ4ILpQ/edit?usp=sharing
+WBS
+https://docs.google.com/spreadsheets/d/1BG5r6skZMC3nqn9e3ftnz8ieLt7vieUX3kgGh4GwotE/edit?usp=sharing
 
 ## 開発環境
 - OS：windows(windows10)
