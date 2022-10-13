@@ -1,0 +1,2 @@
+class TakeoutItem < ApplicationRecord
+end
