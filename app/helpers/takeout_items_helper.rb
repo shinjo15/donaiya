@@ -1,0 +1,2 @@
+module TakeoutItemsHelper
+end
