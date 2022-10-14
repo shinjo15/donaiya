@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Donaiya</title>
+    <title>neambiya</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,84 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav class="navbar navbar-expand-lg header-color">
+          <a class="navbar-brand" href="/">
+            <span class="header-text">ねむび屋</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <% if admin_signed_in? %>
+                <li class="nav-item">
+                 <%= link_to "管理者Home", homes_admin_top_path, class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                 <%= link_to "Menu管理", new_recommendation_path, class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                 <%= link_to "Takeout管理", new_takeout_item_path, class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                 <%= link_to "News管理", new_notice_path, class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link' %>
+                </li>
+              <% else %>
+                <li class="nav-item">
+                 <%= link_to "Home",class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                 <%= link_to "About",class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                 <%= link_to "Menu",class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                 <%= link_to "Takeout", class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                 <%= link_to "News", class: 'nav-link' %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+      </nav>
+    </header>
+    <main>
+   <% flash.each do |message_type, message| %>
+    <p id="<%= message_type %>"><%= message %></p>
+   <% end %>
+   <%= yield %>
+  </main>
+    <footer>
+      <div class="container-fluid footer-color">
+        <div class="row">
+          <div class="mx-auto">
+            <p>ねむび屋</p>
+          </div>
+        </div>
+         <div class="row">
+          <div class="mx-auto">
+            <p>大阪府大阪市住之江区中加賀屋2-2-3</p>
+          </div>
+        </div>
+         <div class="row">
+          <div class="mx-auto">
+            <p>営業時間　0:00～0:00</p>
+            <p>定休日　月曜</p>
+          </div>
+        </div>
+         <div class="row">
+          <div class="mx-auto">
+            <p>電話番号　00-0000-0000</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
