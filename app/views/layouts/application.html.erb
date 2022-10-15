@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <div class="content">
     <header>
       <nav class="navbar navbar-expand-lg header-color">
           <a class="navbar-brand" href="/">
@@ -39,19 +40,19 @@
                   <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link' %>
                 </li>
               <% else %>
-                <li class="nav-item">
+                <li class="nav-item ml-4">
                  <%= link_to "Home",class: 'nav-link' %>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ml-4">
                  <%= link_to "About",class: 'nav-link' %>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ml-4">
                  <%= link_to "Menu",class: 'nav-link' %>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ml-4">
                  <%= link_to "Takeout", class: 'nav-link' %>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mx-4">
                  <%= link_to "News", class: 'nav-link' %>
                 </li>
               <% end %>
@@ -65,8 +66,9 @@
    <% end %>
    <%= yield %>
   </main>
+  </div>
     <footer>
-      <div class="container-fluid footer-color">
+      <div class="container-fluid py-5 footer-color">
         <div class="row">
           <div class="mx-auto">
             <p>ねむび屋</p>
