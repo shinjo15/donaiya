@@ -51,6 +51,11 @@ header {
 .my-40{
  margin:40px 0;
 }
+
+.mb-140{
+ margin-bottom: 140px;
+}
+
 footer {
   position: sticky;
   top: 100vh;
