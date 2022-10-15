@@ -15,7 +15,7 @@
       <header>
         <nav class="navbar navbar-expand-lg header-color">
           <a class="navbar-brand" href="/">
-            <span class="header-text">ねむび屋</span>
+            <span class="header-text middle">ねむび屋</span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse"
            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,35 +25,35 @@
             <ul class="navbar-nav ml-auto">
               <% if admin_signed_in? %>
                 <li class="nav-item">
-                  <%= link_to "管理者Home", homes_admin_top_path, class: 'nav-link' %>
+                  <%= link_to "管理者Home", homes_admin_top_path, class: 'text nav-link' %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "Menu管理", new_recommendation_path, class: 'nav-link' %>
+                  <%= link_to "Menu管理", new_recommendation_path, class: 'text nav-link' %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "Takeout管理", new_takeout_item_path, class: 'nav-link' %>
+                  <%= link_to "Takeout管理", new_takeout_item_path, class: 'text nav-link' %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "News管理", new_notice_path, class: 'nav-link' %>
+                  <%= link_to "News管理", new_notice_path, class: 'text nav-link' %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link' %>
+                  <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'text nav-link' %>
                 </li>
               <% else %>
                 <li class="nav-item ml-4">
-                  <%= link_to "Home",class: 'nav-link' %>
+                  <%= link_to "Home",class: 'text nav-link' %>
                 </li>
                 <li class="nav-item ml-4">
-                  <%= link_to "About",class: 'nav-link' %>
+                  <%= link_to "About",class: 'text nav-link' %>
                 </li>
                 <li class="nav-item ml-4">
-                  <%= link_to "Menu",class: 'nav-link' %>
+                  <%= link_to "Menu",class: 'text nav-link' %>
                 </li>
                 <li class="nav-item ml-4">
-                  <%= link_to "Takeout", class: 'nav-link' %>
+                  <%= link_to "Takeout", class: 'text nav-link' %>
                 </li>
                 <li class="nav-item mx-4">
-                  <%= link_to "News", class: 'nav-link' %>
+                  <%= link_to "News", class: 'text nav-link' %>
                 </li>
               <% end %>
             </ul>
@@ -68,25 +68,25 @@
       </main>
     </div>
     <footer>
-      <div class="container-fluid py-5 footer-color">
+      <div class="container-fluid py-3 footer-color">
         <div class="row">
-          <div class="mx-auto">
+          <div class="text small mx-auto">
             <p>ねむび屋</p>
           </div>
         </div>
         <div class="row">
-          <div class="mx-auto">
+          <div class="text small mx-auto">
             <p>大阪府大阪市住之江区中加賀屋2-2-3</p>
           </div>
         </div>
         <div class="row">
-          <div class="mx-auto">
+          <div class="text small mx-auto">
             <p>営業時間　0:00～0:00</p>
             <p>定休日　月曜</p>
           </div>
         </div>
         <div class="row">
-          <div class="mx-auto">
+          <div class="text small mx-auto">
             <p>電話番号　00-0000-0000</p>
           </div>
         </div>

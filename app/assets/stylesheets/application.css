@@ -68,9 +68,21 @@ footer {
  height: 100%;
 }
 
+.w-100{
+ width: 100%;
+}
+
 
 .title{
  font-size: 50px;
+}
+
+.middle{
+ font-size: 30px;
+}
+
+.text{
+ font-size: 18px;
 }
 
 .title-bar{
@@ -81,4 +93,9 @@ footer {
 .title-textbox{
  background-color: #111;
  color: #fff;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 70px;
 }
