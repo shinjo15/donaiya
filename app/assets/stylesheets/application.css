@@ -38,6 +38,9 @@ header {
    color: #000;
  }
 
+.my-40{
+ margin:40px 0;
+}
 footer {
   position: sticky;
   top: 100vh;
