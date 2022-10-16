@@ -1,12 +1,12 @@
 class TakeoutItemsController < ApplicationController
   def new
-    @takeout_item = Takeout.new
+    @takeout_item = TakeoutItem.new
   end
 
   def create
-    takeout_item = Takeout.new(takeout_items_params)
+    takeout_item = TakeoutItem.new(takeout_items_params)
     takeout_item.save
-    redirect_to edit_takeout_item(takeout_item.id)
+    redirect_to edit_takeout_item_path(takeout_item.id)
 
   end
 

@@ -19,7 +19,7 @@
              <span><%= food.tax_price %>円</span><br>
             <span class="text small"><%= food.details %></span>
           </td class="col-2">
-          <td><%= link_to "削除", recommendation_path(food.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-outline-danger" %></td>
+          <td><%= link_to "編集", edit_recommendation_path(food.id), class: "btn btn-outline-success" %></td>
         </tr>
         <% end %>
       </table>

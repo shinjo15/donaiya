@@ -7,13 +7,21 @@ class RecommendationsController < ApplicationController
   def create
     food = Recommendation.new(recommendations_params)
     food.save
-    redirect_to new_recommendation_path
+    redirect_to edit_recommendation_path
   end
 
   def index
   end
 
   def edit
+    @food = Recommendation.find(params[:id])
+  end
+
+  def update
+    food = Recommendation.find(params[:id])
+    food.update(recommendations_params)
+    redirect_to new_recommendation_path
+
   end
 
   def destroy
