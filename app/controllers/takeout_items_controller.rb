@@ -1,6 +1,7 @@
 class TakeoutItemsController < ApplicationController
   def new
     @takeout_item = TakeoutItem.new
+    @takeout_items = TakeoutItem.all
   end
 
   def create
@@ -14,9 +15,22 @@ class TakeoutItemsController < ApplicationController
   end
 
   def edit
+    @takeout_item = TakeoutItem.find(params[:id])
+  end
+  
+  def update
+    takeout_item = TakeoutItem.find(params[:id])
+    takeout_item.update(takeout_items_params)
+    redirect_to new_takeout_item_path
   end
 
   def show
+  end
+  
+  def destroy
+    takeout_item = TakeoutItem.find(params[:id])
+    takeout_item.destroy
+    redirect_to new_takeout_item_path
   end
 
   private

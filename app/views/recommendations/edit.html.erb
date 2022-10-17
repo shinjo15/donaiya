@@ -1,7 +1,13 @@
+<div class="container-fluid my-40 title-bar">
+  <div class="row h-100">
+    <div class="col-8 h-100 mx-auto title-textbox">
+      <div class="title d-flex align-items-center justify-content-center">Menu編集</div>
+    </div>
+  </div>
+</div>
 <div class="container my-40">
-      <h4 class="middle d-flex justify-content-center">編集</h4>
-      <div class="my-40">
-        <%= form_with model: @food, url: recommendations_path do |f| %>
+  <div class="my-40">
+    <%= form_with model: @food, url: recommendation_path do |f| %>
       <div class="row mb-4">
         <label class="col-4 d-flex align-items-center justify-content-center"><b>料理画像</b></label>
         <%= f.file_field :image, accept: "image/*" %>
@@ -21,12 +27,9 @@
       <div class="row mt-5 mb-140">
         <div class="col-4"></div>
         <div class="col-4"><%= f.submit "更新", class: "col-6 btn btn-success" %></div>
-      <% end %>
-        <div class="col-4"><%= link_to "削除", recommendations_path(@food.id), method: :delete, class: "col-6 btn btn-danger" %></div>
-     </div>
-
- <span class="d-flex justify-content-center"><%= link_to "管理者Topに戻る", homes_admin_top_path, class: "col-4 btn btn-outline-dark" %></span>
+        <div class="col-4"><%= link_to "削除", recommendation_path(@food.id), method: :delete, class: "col-6 btn btn-danger", "data-confirm" => "本当に削除しますか？"  %></div>
       </div>
-    </div>
+    <% end %>
+    <span class="d-flex justify-content-center"><%= link_to "更新せずに戻る", new_recommendation_path, class: "col-4 btn btn-outline-dark" %></span>
   </div>
 </div>
