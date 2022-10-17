@@ -7,7 +7,7 @@ class NoticesController < ApplicationController
   def create
     notice = Notice.new(notices_params)
     notice.save
-    redirect_to edit_notice_path(notice.id)
+    redirect_to new_notice_path
   end
 
   def edit
