@@ -102,13 +102,19 @@ footer {
 }
 
 .title-bar{
- height: 90px;
+ height: 150px;
  background-color: #560D04;
 }
 
 .title-textbox{
  background-color: #111;
  color: #fff;
+}
+
+.about-image{
+ background-image: image-url('cropPAKS_BISTROtennai.jpg');
+ background-size: cover;
+ background-position: center;
 }
 
 table {
@@ -150,3 +156,11 @@ table {
  transform: translate(-50%, -60%);
 }
 
+.background-gradient{
+ background: linear-gradient(#111, #535353);
+}
+
+.sub-title{
+ background-color: rgba(17,17,17,0.8);
+ color: #fff;
+}
