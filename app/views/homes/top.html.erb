@@ -31,6 +31,19 @@
         <div class="h-100 sub-title"><span class="title h-100 d-flex align-items-center justify-content-center">今月のおすすめ</span></div>
       </div>
     </div>
-    <div class="row w-60 mx-auto about-padding"></div>
+    <div class="row w-60 mx-auto about-padding">
+      <table class="w-100">
+        <% @foods.each do |food| %>
+          <tr class="border-bottom border-light">
+            <td class="col-6 pt-4"><%= image_tag food.image, size: "400x300" %></td>
+            <td class="col-6">
+              <span class="middle text-light d-flex justify-content-center"><%= food.name %></span><br>
+              <span class="text text-light"><%= food.tax_price %>円</span><br>
+              <span class="text small text-light"><%= food.details %></span>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
   </div>
 </div>
