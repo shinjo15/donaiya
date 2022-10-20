@@ -34,7 +34,7 @@
     <div class="row w-60 mx-auto about-padding">
       <table class="w-100">
         <% @foods.each do |food| %>
-          <tr class="border-bottom border-light">
+          <tr class="border-bottom border-light recommends">
             <td class="col-6 pt-4"><%= image_tag food.image, size: "400x300" %></td>
             <td class="col-6">
               <span class="middle text-light d-flex justify-content-center"><%= food.name %></span><br>
@@ -44,6 +44,30 @@
           </tr>
         <% end %>
       </table>
+      <div class="row w-100">
+        <span class="w-100 title-margin text-right"><%= link_to "メニューを見る", recommendations_path, class: "btn-color" %></span>
+      </div>
     </div>
+    <div class="row my-40 title-bar">
+      <div class="col-8 p-0 h-100 mx-auto about-image">
+        <div class="h-100 sub-title"><span class="title h-100 d-flex align-items-center justify-content-center">今月のおすすめ</span></div>
+      </div>
+    </div>
+    <div class="takeout-back my-40">
+      <div class="row w-85 mx-auto">
+        <% @takeout_items.each do |takeout_item| %>
+          <div class="col-4">
+            <%= image_tag takeout_item.image, size: "360x270" %>
+              <p><span class="middle text-light "><%= takeout_item.takeout_name %></span></p>
+              <p><span class="text text-light"><%= takeout_item.tax_price %>円</span></p>
+          </div>
+        <% end %>
+      <div class="row w-100">
+        <span class="w-100 title-margin text-center"><%= link_to "TAKEOUT商品を見る", recommendations_path, class: "btn-color" %></span>
+      </div>
+      </div>
+    </div>
+    </div>
+    <hr>
   </div>
 </div>

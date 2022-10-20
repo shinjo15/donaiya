@@ -32,6 +32,7 @@ body {
   padding: 0;
   height: 100%;
 }
+
 header {
  position: fixed;
  top: 0;
@@ -53,7 +54,7 @@ header {
  }
 
 .my-40{
- margin:40px 0;
+ margin: 40px 0;
 }
 
 .mb-140{
@@ -126,6 +127,11 @@ footer {
  color: #fff;
 }
 
+.title-margin{
+ margin-top: 110px;
+ margin-bottom: 40px;
+}
+
 .about-image{
  background-image: image-url('cropPAKS_BISTROtennai.jpg');
  background-size: cover;
@@ -178,4 +184,21 @@ table {
 .sub-title{
  background-color: rgba(17,17,17,0.8);
  color: #fff;
+}
+
+.recommends:nth-child(2n){
+
+}
+
+.btn-color{
+ padding: 40px 50px;
+ background-color: #3E5604;
+ color: #fff;
+ border-radius: 60px;
+}
+
+.takeout-back{
+ background-color: #111;
+ padding: 30px 0;
+ margin-left: 70px;
 }
