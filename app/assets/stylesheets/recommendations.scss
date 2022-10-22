@@ -1,3 +1,79 @@
 // Place all the styles related to the recommendations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.menu-title{
+height: 450px;
+ background-color: #560D04;
+}
+
+
+.nabe-box{
+  width: 1200px;
+  height: 1110px;
+  position: relative;
+}
+
+.nabe{
+  background-color: #ffd700;
+  margin: 0 10px 10px 0;
+}
+
+.nabe:first-child{
+  width: 700px;
+  height: 525px;
+}
+
+.nabe:nth-child(2){
+  width: 490px;
+  height: 250px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: 0;
+}
+
+.nabe:nth-child(3){
+  width: 240px;
+  height: 265px;
+  position: absolute;
+  top: 260px;
+  left: 710px;
+}
+
+.nabe:nth-child(4){
+  width: 240px;
+  height: 415px;
+  position: absolute;
+  top: 260px;
+  right: 0px;
+  margin-right: 0;
+}
+
+.nabe:nth-child(5){
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 535px;
+  left: 0px;
+  margin-bottom: 0;
+}
+
+.nabe:nth-child(6){
+  width: 540px;
+  height: 400px;
+  position: absolute;
+  top: 535px;
+  left: 410px;
+  margin-bottom: 0;
+}
+
+.nabe:nth-child(7){
+  width: 240px;
+  height: 250px;
+  position: absolute;
+  top: 685px;
+  right: 0px;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+

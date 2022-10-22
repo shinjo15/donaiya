@@ -1,2 +1,18 @@
-<h1>Notices#show</h1>
-<p>Find me in app/views/notices/show.html.erb</p>
+<div class="container-fluid p-0 background-gradient">
+  <div class="under-header"></div>
+  <div class="row notice_update">
+    <p class="text w-100 d-flex justify-content-center"><small><%= @notice.updated_at %></small></p>
+  </div>
+  <div class="row notice_title">
+    <h1 class="title w-100 d-flex justify-content-center"><%= @notice.title %></h1>
+  </div>
+  <div class="row w-85 mx-auto notice-detail">
+    <div class="row w-85 mx-auto">
+      <p class="text w-100 d-flex justify-content-center"><%= @notice.notice_details %></p>
+    </div>
+  </div>
+  <div class="row w-100 mx-0">
+    <p class="w-100 title-margin text-center"><%= link_to "Topへ戻る", root_path, class: "btn-color" %></p>
+  </div>
+  <div class="under-header"></div>
+</div>
