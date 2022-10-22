@@ -1,7 +1,7 @@
-<div class="container-fluid my-40 title-bar">
+<div class="container-fluid title-margin title-bar">
   <div class="row h-100">
     <div class="col-8 h-100 mx-auto title-textbox">
-      <div class="title d-flex align-items-center justify-content-center">お知らせ管理</div>
+      <div class="title h-100 d-flex align-items-center justify-content-center"><h1>お知らせ管理</h1></div>
     </div>
   </div>
 </div>
@@ -9,24 +9,24 @@
 <div class="container my-40">
   <div class="row">
     <div class="col-sm-7">
-      <h4 class="middle d-flex justify-content-center">お知らせ一覧</h4>
+      <h2 class="middle d-flex justify-content-center">お知らせ一覧</h2>
       <div class="row my-40">
         <% @notices.each do |notice| %>
           <div class="card col-10 mb-3">
             <div class="card-body">
               <div class="card-body p-0">
-                <h5 class="card-title"><%= notice.title %></h5>
-                <p class="card-text"><small class="text-muted"><%= notice.updated_at %></small></p>
+                <p class="card-title middle"><small><%= notice.title %></small></p>
+                <p class="card-text text"><small class="text-muted"><%= notice.updated_at %></small></p>
               </div>
             </div>
           </div>
-          <div class="col-2 d-flex align-items-center justify-content-center"><%= link_to "編集", edit_notice_path(notice.id), class: "btn btn-outline-success" %></div>
+          <p class="col-2 d-flex align-items-center justify-content-center"><%= link_to "編集", edit_notice_path(notice.id), class: "btn btn-outline-success" %></p>
         <% end %>
       </div>
     </div>
 
     <div class="col-sm-5">
-      <h4 class="middle d-flex justify-content-center">新規登録</h4>
+      <h2 class="middle d-flex justify-content-center">新規登録</h2>
       <div class="my-40">
         <%= form_with model: @notice, url: notices_path do |f| %>
           <div class="row mb-4">

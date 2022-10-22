@@ -2,13 +2,15 @@
   <div class="row relative">
     <div class="col-6 top-image"></div>
     <div class="col-6 top-image"></div>
-    <div class="top-textbox"><span class="h-100 title d-flex align-items-center justify-content-center">ねむび屋</span></div>
+    <div class="top-textbox">
+      <div class="title h-100 d-flex align-items-center justify-content-center"><h1>ねむび屋</h1></div>
+    </div>
   </div>
   <div class="p-0 background-gradient">
     <div class="row w-85 mx-auto about-padding">
       <div class="col-sm-6">
         <h2 class="title text-light mb-5">About</h2>
-        <h4 class="middle text-light mb-140">韓国風居酒屋ねむび屋</h4>
+        <h3 class="middle text-light mb-140">韓国風居酒屋ねむび屋</h3>
         <p class="text  small text-light">
           ここにテキストがはいる。ここにテキストがはいる。<br>
           ここにテキストがはいる。ここにテキストがはいる。<br>
@@ -28,7 +30,9 @@
     </div>
     <div class="row my-40 title-bar">
       <div class="col-8 p-0 h-100 mx-auto about-image">
-        <div class="h-100 sub-title"><span class="title h-100 d-flex align-items-center justify-content-center">今月のおすすめ</span></div>
+        <div class="h-100 sub-title">
+          <div class="title h-100 d-flex align-items-center justify-content-center"><h1>今月のおすすめ</h1></div>
+        </div>
       </div>
     </div>
     <div class="row w-60 mx-auto about-padding">
@@ -37,37 +41,62 @@
           <tr class="border-bottom border-light recommends">
             <td class="col-6 pt-4"><%= image_tag food.image, size: "400x300" %></td>
             <td class="col-6">
-              <span class="middle text-light d-flex justify-content-center"><%= food.name %></span><br>
-              <span class="text text-light"><%= food.tax_price %>円</span><br>
-              <span class="text small text-light"><%= food.details %></span>
+              <p class="middle text-light d-flex justify-content-center"><%= food.name %></p>
+              <p class="text text-light"><%= food.tax_price %>円</p>
+              <p class="text small text-light"><%= food.details %></p>
             </td>
           </tr>
         <% end %>
       </table>
       <div class="row w-100">
-        <span class="w-100 title-margin text-right"><%= link_to "メニューを見る", recommendations_path, class: "btn-color" %></span>
+        <p class="w-100 title-margin text-right"><%= link_to "メニューを見る", recommendations_path, class: "btn-color" %></p>
       </div>
     </div>
     <div class="row my-40 title-bar">
       <div class="col-8 p-0 h-100 mx-auto about-image">
-        <div class="h-100 sub-title"><span class="title h-100 d-flex align-items-center justify-content-center">今月のおすすめ</span></div>
+        <div class="h-100 sub-title">
+          <div class="title h-100 d-flex align-items-center justify-content-center"><h1>TAKEOUT</h1></div>
+        </div>
       </div>
     </div>
-    <div class="takeout-back my-40">
+    <div class="takeout-back my-80">
       <div class="row w-85 mx-auto">
         <% @takeout_items.each do |takeout_item| %>
           <div class="col-4">
             <%= image_tag takeout_item.image, size: "360x270" %>
-              <p><span class="middle text-light "><%= takeout_item.takeout_name %></span></p>
-              <p><span class="text text-light"><%= takeout_item.tax_price %>円</span></p>
+            <p class="middle text-light "><%= takeout_item.takeout_name %></p>
+            <p class="text text-light"><%= takeout_item.tax_price %>円</p>
           </div>
         <% end %>
+      </div>
       <div class="row w-100">
-        <span class="w-100 title-margin text-center"><%= link_to "TAKEOUT商品を見る", recommendations_path, class: "btn-color" %></span>
-      </div>
+        <p class="w-100 title-margin text-center"><%= link_to "TAKEOUT商品を見る", recommendations_path, class: "btn-color" %></p>
       </div>
     </div>
+    <hr class="m-0 bg-light">
+    <div class="row my-40">
+      <div class="col-8 p-0 h-100 mx-auto">
+        <div class="title text-light h-100 d-flex align-items-center justify-content-center"><h1>お知らせ</h1></div>
+      </div>
     </div>
-    <hr>
+    <div class="row w-85 mx-auto">
+      <div class="row w-100 mx-0 my-40">
+        <% @notices.each do |notice| %>
+        <%= link_to notice_path(notice.id), class: "row col-12 text-dark" do  %>
+          <div class="card w-100 mb-3">
+            <div class="card-body">
+              <div class="row">
+                <h3 class="middle col-9"><%= notice.title %></h3>
+              <p class="text col-3 d-flex align-items-center justify-content-center"><small><%= notice.updated_at %></small></p>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="row w-100 mx-0 mb-140">
+        <p class="w-100 title-margin text-center"><%= link_to "Topへ戻る", root_path, class: "btn-color" %></p>
+      </div>
+    </div>
   </div>
 </div>

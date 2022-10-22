@@ -1,7 +1,7 @@
-<div class="container-fluid my-40 title-bar">
+<div class="container-fluid title-margin title-bar">
   <div class="row h-100">
     <div class="col-8 h-100 mx-auto title-textbox">
-      <div class="title d-flex align-items-center justify-content-center">Menu管理</div>
+      <div class="title h-100 d-flex align-items-center justify-content-center"><h1>Menu管理</h1></div>
     </div>
   </div>
 </div>
@@ -15,9 +15,9 @@
           <tr class="border-bottom border-dark">
             <td class="col-6 pt-4"><%= image_tag food.image, size: "240x180" %></td>
             <td class="col-4">
-              <span class="middle d-flex justify-content-center"><%= food.name %></span><br>
-              <span><%= food.tax_price %>円</span><br>
-              <span class="text small"><%= food.details %></span>
+              <p class="middle d-flex justify-content-center"><%= food.name %></p>
+              <p><%= food.tax_price %>円</p>
+              <p class="text small"><%= food.details %></p>
             </td>
             <td><%= link_to "編集", edit_recommendation_path(food.id), class: "btn btn-outline-success" %></td>
           </tr>
@@ -28,7 +28,7 @@
     <div class="col-sm-1"></div>
 
     <div class="col-sm-5">
-      <h4 class="middle">新規登録</h4>
+      <h2 class="middle">新規登録</h2>
       <div class="my-40">
         <%= form_with model: @food, url: recommendations_path do |f| %>
           <div class="row mb-4">
