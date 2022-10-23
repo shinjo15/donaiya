@@ -102,55 +102,253 @@ height: 600px;
 }
 
 .niku:nth-child(2){
-  width: 490px;
-  height: 250px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin-right: 0;
+ width: 240px;
+ height: 350px;
+ position: absolute;
+ top: 0;
+ left: 710px;
 }
 
 .niku:nth-child(3){
-  width: 240px;
-  height: 265px;
-  position: absolute;
-  top: 260px;
-  left: 710px;
+ width: 240px;
+ height: 240px;
+ position: absolute;
+ top: 0;
+ right: 0;
+ margin-right: 0;
 }
 
 .niku:nth-child(4){
-  width: 240px;
-  height: 415px;
-  position: absolute;
-  top: 260px;
-  right: 0px;
-  margin-right: 0;
+ width: 240px;
+ height: 165px;
+ position: absolute;
+ top: 360px;
+ left: 710px;
+ margin-bottom: 0;
 }
 
 .niku:nth-child(5){
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  top: 535px;
-  left: 0px;
-  margin-bottom: 0;
+ width: 100px;
+ height: 100px;
+ position: absolute;
+ top: 525px;
+ left: 850px;
 }
 
 .niku:nth-child(6){
-  width: 540px;
-  height: 400px;
-  position: absolute;
-  top: 535px;
-  left: 410px;
-  margin-bottom: 0;
+ width: 240px;
+ height: 375px;
+ position: absolute;
+ top: 250px;
+ right: 0px;
+ margin-right: 0;
 }
 
 .niku:nth-child(7){
-  width: 240px;
-  height: 250px;
-  position: absolute;
-  top: 685px;
-  right: 0px;
-  margin-bottom: 0;
-  margin-right: 0;
+ width: 300px;
+ height: 400px;
+ position: absolute;
+ top: 535px;
+ left: 0px;
+ margin-bottom: 0;
+}
+
+.niku:nth-child(8){
+ width: 530px;
+ height: 400px;
+ position: absolute;
+ top: 535px;
+ left: 310px;
+ margin-bottom: 0;
+}
+
+.niku:nth-child(9){
+ width: 350px;
+ height: 300px;
+ position: absolute;
+ top: 635px;
+ right: 0px;
+ margin-bottom: 0;
+ margin-right: 0;
+}
+
+
+// <ここから韓国風料理のCSS>
+.korea{
+ background-color: #fff;
+ margin: 0 10px 10px 0;
+}
+
+.korea:first-child{
+ width: 700px;
+ height: 525px;
+}
+
+.korea:nth-child(2){
+ width: 490px;
+ height: 250px;
+ position: absolute;
+ top: 0px;
+ right: 0px;
+ margin-right: 0;
+}
+
+.korea:nth-child(3){
+ width: 240px;
+ height: 265px;
+ position: absolute;
+ top: 260px;
+ left: 710px;
+}
+
+.korea:nth-child(4){
+ width: 240px;
+ height: 415px;
+ position: absolute;
+ top: 260px;
+ right: 0px;
+ margin-right: 0;
+}
+
+.korea:nth-child(5){
+ width: 400px;
+ height: 190px;
+ position: absolute;
+ top: 535px;
+ left: 0px;
+}
+
+.korea:nth-child(6){
+ width: 290px;
+ height: 190px;
+ position: absolute;
+ top: 535px;
+ left: 410px;
+}
+
+.korea:nth-child(7){
+ width: 240px;
+ height: 190px;
+ position: absolute;
+ top: 535px;
+ left: 710px;
+}
+
+.korea:nth-child(8){
+ width: 250px;
+ height: 200px;
+ position: absolute;
+ top: 735px;
+ left: 0px;
+ margin-bottom: 0;
+}
+
+.korea:nth-child(9){
+ width: 250px;
+ height: 200px;
+ position: absolute;
+ top: 735px;
+ left: 260px;
+ margin-bottom: 0;
+}
+
+.korea:nth-child(10){
+ width: 430px;
+ height: 200px;
+ position: absolute;
+ top: 735px;
+ left: 520px;
+ margin-bottom: 0;
+}
+
+.korea:nth-child(11){
+ width: 240px;
+ height: 250px;
+ position: absolute;
+ top: 685px;
+ right: 0px;
+ margin-bottom: 0;
+ margin-right: 0;
+}
+
+
+// <ここからサイドメニューとドリンクのCSS>
+.menu-back{
+  background-color: #111;
+  padding: 100px 0 100px 0;
+  margin: 200px 0 300px 0;
+}
+
+.menu-box{
+  width: 1300px;
+  height: 810px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.side-menu{
+ background-color: #fff;
+ margin: 0 10px 10px 0;
+}
+
+.side-menu:first-child{
+ width: 400px;
+ height: 350px;
+}
+
+.side-menu:nth-child(2){
+ width: 240px;
+ height: 175px;
+ position: absolute;
+ top: 0px;
+ left: 410px;
+}
+
+.side-menu:nth-child(3){
+ width: 240px;
+ height: 225px;
+ position: absolute;
+ top: 185px;
+ left: 410px;
+}
+
+.side-menu:nth-child(4){
+ width: 250px;
+ height: 400px;
+ position: absolute;
+ top: 360px;
+ left: 0;
+ margin-bottom: 0;
+}
+
+.side-menu:nth-child(5){
+ width: 140px;
+ height: 200px;
+ position: absolute;
+ top: 360px;
+ left: 260px;
+}
+
+.side-menu:nth-child(6){
+ width: 115px;
+ height: 140px;
+ position: absolute;
+ top: 420px;
+ left: 410px;
+}
+
+.side-menu:nth-child(7){
+ width: 265px;
+ height: 190px;
+ position: absolute;
+ top: 570px;
+ left: 260px;
+}
+
+.side-menu:nth-child(8){
+ width: 115px;
+ height: 340px;
+ position: absolute;
+ top: 420px;
+ left: 535px;
 }
