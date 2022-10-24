@@ -272,18 +272,24 @@ height: 600px;
 }
 
 
-// <ここからサイドメニューとドリンクのCSS>
+// <ここからサイドメニューのCSS>
 .menu-back{
   background-color: #111;
   padding: 100px 0 100px 0;
-  margin: 200px 0 300px 0;
+  margin-top: 200px;
 }
 
 .menu-box{
-  width: 1300px;
-  height: 810px;
+  width: 1350px;
+  height: 710px;
   margin: 0 auto;
-  position: relative;
+  display: flex;
+}
+
+.side-menu-box{
+ width: 680px;
+ height: 710px;
+ position: relative;
 }
 
 .side-menu{
@@ -297,24 +303,24 @@ height: 600px;
 }
 
 .side-menu:nth-child(2){
- width: 240px;
- height: 175px;
+ width: 260px;
+ height: 150px;
  position: absolute;
  top: 0px;
  left: 410px;
 }
 
 .side-menu:nth-child(3){
- width: 240px;
- height: 225px;
+ width: 260px;
+ height: 260px;
  position: absolute;
- top: 185px;
+ top: 160px;
  left: 410px;
 }
 
 .side-menu:nth-child(4){
- width: 250px;
- height: 400px;
+ width: 260px;
+ height: 350px;
  position: absolute;
  top: 360px;
  left: 0;
@@ -322,33 +328,114 @@ height: 600px;
 }
 
 .side-menu:nth-child(5){
- width: 140px;
- height: 200px;
+ width: 130px;
+ height: 170px;
  position: absolute;
  top: 360px;
- left: 260px;
+ left: 270px;
 }
 
 .side-menu:nth-child(6){
- width: 115px;
- height: 140px;
+ width: 130px;
+ height: 100px;
  position: absolute;
- top: 420px;
+ top: 430px;
  left: 410px;
 }
 
 .side-menu:nth-child(7){
- width: 265px;
- height: 190px;
+ width: 270px;
+ height: 170px;
  position: absolute;
- top: 570px;
- left: 260px;
+ top: 540px;
+ left: 270px;
 }
 
 .side-menu:nth-child(8){
- width: 115px;
- height: 340px;
+ width: 120px;
+ height: 280px;
  position: absolute;
- top: 420px;
- left: 535px;
+ top: 430px;
+ left: 550px;
+}
+
+
+// <ここからドリンクのCSS>
+.drink-box{
+ width: 670px;
+ height: 710px;
+ position: relative;
+}
+
+.drink{
+ background-color: #fff;
+ margin: 0 10px 10px 0;
+}
+
+.drink:first-child{
+ width: 400px;
+ height: 350px;
+ position: absolute;
+ top: 0px;
+left: 0px;
+}
+
+.drink:nth-child(2){
+ width: 260px;
+ height: 260px;
+ position: absolute;
+ top: 0px;
+ left: 410px;
+ margin-right: 0;
+}
+
+.drink:nth-child(3){
+ width: 120px;
+ height: 80px;
+ position: absolute;
+ top: 270px;
+ left: 410px;
+}
+
+.drink:nth-child(4){
+ width: 260px;
+ height: 220px;
+ position: absolute;
+ top: 360px;
+ left: 0px;
+}
+
+.drink:nth-child(5){
+ width: 260px;
+ height: 220px;
+ position: absolute;
+ top: 360px;
+ left: 270px;
+}
+
+.drink:nth-child(6){
+ width: 130px;
+ height: 310px;
+ position: absolute;
+ top: 270px;
+ right: 0px;
+ margin-right: 0;
+}
+
+.drink:nth-child(7){
+ width: 400px;
+ height: 120px;
+ position: absolute;
+ top: 590px;
+ left: 0px;
+ margin-right: 0;
+}
+
+.drink:nth-child(8){
+ width: 260px;
+ height: 120px;
+ position: absolute;
+ top: 590px;
+ right: 0px;
+ margin-right: 0;
 }
