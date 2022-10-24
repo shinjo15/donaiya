@@ -12,12 +12,13 @@ class TakeoutItemsController < ApplicationController
   end
 
   def index
+    @takeout_items = TakeoutItem.all
   end
 
   def edit
     @takeout_item = TakeoutItem.find(params[:id])
   end
-  
+
   def update
     takeout_item = TakeoutItem.find(params[:id])
     takeout_item.update(takeout_items_params)
@@ -26,7 +27,7 @@ class TakeoutItemsController < ApplicationController
 
   def show
   end
-  
+
   def destroy
     takeout_item = TakeoutItem.find(params[:id])
     takeout_item.destroy

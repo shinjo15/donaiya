@@ -1,4 +1,4 @@
-<div class="   ">
+<div class="container-fluid p-0 mx-0">
   <div class="row relative">
     <div class="col-6 top-image"></div>
     <div class="col-6 top-image"></div>
@@ -28,7 +28,7 @@
         <%= image_tag "cropPAKS_BISTROtennai.jpg", class: "w-85"%>
       </div>
     </div>
-    <div class="row my-40 title-bar">
+    <div class="row my-40 mx-0 title-bar">
       <div class="col-8 p-0 h-100 mx-auto about-image">
         <div class="h-100 sub-title">
           <div class="title h-100 d-flex align-items-center justify-content-center"><h1>今月のおすすめ</h1></div>
@@ -52,7 +52,7 @@
         <p class="w-100 title-margin text-right"><%= link_to "メニューを見る", recommendations_path, class: "btn-color" %></p>
       </div>
     </div>
-    <div class="row my-40 title-bar">
+    <div class="row my-40 mx-0 title-bar">
       <div class="col-8 p-0 h-100 mx-auto about-image">
         <div class="h-100 sub-title">
           <div class="title h-100 d-flex align-items-center justify-content-center"><h1>TAKEOUT</h1></div>
@@ -70,11 +70,11 @@
         <% end %>
       </div>
       <div class="row w-100">
-        <p class="w-100 title-margin text-center"><%= link_to "TAKEOUT商品を見る", recommendations_path, class: "btn-color" %></p>
+        <p class="w-100 title-margin text-center"><%= link_to "TAKEOUT商品を見る", takeout_items_path, class: "btn-color" %></p>
       </div>
     </div>
     <hr class="m-0 bg-light">
-    <div class="row my-40">
+    <div class="row  mx-0 my-40">
       <div class="col-8 p-0 h-100 mx-auto">
         <div class="title text-light h-100 d-flex align-items-center justify-content-center"><h1>お知らせ</h1></div>
       </div>

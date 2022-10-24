@@ -1,2 +1,39 @@
-<h1>TakeoutItems#index</h1>
-<p>Find me in app/views/takeout_items/index.html.erb</p>
+<div class="container-fluid p-0 background-gradient">
+  <div class="under-header"></div>
+  <div class="row my-40 mx-0 menu-title">
+    <div class="col-8 p-0 h-100 mx-auto about-image">
+      <div class="h-100 sub-title">
+        <h1 class="title h-100 d-flex align-items-center justify-content-center">TAKEOUT</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-140 mx-0">
+    <div class="col-8 mx-auto attention">
+      <h2 class="middle h-100 d-flex align-items-center justify-content-center">注意事項等</h2>
+    </div>
+  </div>
+  <div class="takeout-items-back w-80 mx-auto">
+  <div class="row mx-0">
+    <% @takeout_items.each do |t| %>
+      <div class="card  mx-auto mb-5">
+        <div class="row mx-0">
+          <div class="col-6 p-0">
+            <%= image_tag t.image, size: "400x300" %>
+          </div>
+          <div class="col-6 p-0">
+            <div class="card-body h-80">
+              <h2 class="card-title middle"><%= t.takeout_name %></h2>
+              <hr class="m-0 bg-dark">
+              <p class="card-text h-100 text d-flex align-items-end">￥<%= t.tax_price %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+  <div class="row w-80  mx-auto takeout-padding">
+    <p class="w-50 title-margin text-center"><%= link_to "カート", cart_items_path, class: "btn-color" %></p>
+    <p class="w-50 title-margin text-center"><%= link_to "Topへ戻る", root_path, class: "btn-color" %></p>
+  </div>
+</div>
