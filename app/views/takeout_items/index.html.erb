@@ -15,7 +15,7 @@
   <div class="takeout-items-back w-80 mx-auto">
   <div class="row mx-0">
     <% @takeout_items.each do |t| %>
-      <div class="card  mx-auto mb-5">
+      <%=link_to takeout_item_path(t.id),class: "card  mx-auto mb-5" do%>
         <div class="row mx-0">
           <div class="col-6 p-0">
             <%= image_tag t.image, size: "400x300" %>
@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
   </div>

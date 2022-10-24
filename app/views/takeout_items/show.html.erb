@@ -1,2 +1,23 @@
-<h1>TakeoutItems#show</h1>
-<p>Find me in app/views/takeout_items/show.html.erb</p>
+<div class="container-fluid p-0 background-gradient">
+  <div class="under-header"></div>
+  <div class="row w-60 my-80 mx-auto">
+    <div class="card-detail row mx-0">
+    <div class="col-8 p-0">
+      <%= image_tag @takeout_item.image, size: "600x450" %>
+    </div>
+    <div class="col-4 bg-light p-0">
+      <div class="card-body h-80">
+        <h2 class="card-title middle"><%= @takeout_item.takeout_name %></h2>
+        <hr class="m-0 bg-dark">
+        <div class="card-text h-100">
+        <p class="text h-80 mb-0 d-flex align-items-center"><%= @takeout_item.takeout_details %></p>
+        <p class="text h-20 d-flex align-items-end">￥<%= @takeout_item.tax_price %></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="row w-100 mx-0  pt-0 takeout-padding">
+    <p class="w-100 title-margin text-center"><%= link_to "TAKEOUT画面へ戻る", takeout_items_path, class: "btn-color" %></p>
+  </div>
+</div>

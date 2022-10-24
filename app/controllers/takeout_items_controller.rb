@@ -26,6 +26,7 @@ class TakeoutItemsController < ApplicationController
   end
 
   def show
+    @takeout_item = TakeoutItem.find(params[:id])
   end
 
   def destroy
