@@ -11,10 +11,11 @@
   padding: 50px;
 }
 
-.card{
+.takeout-card{
   width: 800px;
   height: 300px;
   color: #000;
+  background-color: #fff;
 }
 
 .h-80{
@@ -44,6 +45,15 @@
 
 .card-detail{
   width: 1200px;
-  height: 450px;
+  height: 525px;
   color: #000;
+}
+
+.card-text-margin{
+ margin-top: 110px;
+ margin-bottom: 40px;
+}
+
+.justify{
+  text-align: justify;
 }
