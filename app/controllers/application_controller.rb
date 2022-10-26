@@ -8,6 +8,11 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(resource)
     root_path
   end
+  
+  def current_cart
+    current_cart = Cart.find_by(id: session[:cart_id]) || Cart.create
+    session[:cart_id] ||= current_cart.id
+  end
 
   protected
 

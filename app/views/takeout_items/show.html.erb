@@ -13,6 +13,11 @@
             <div class="card-text h-100">
               <p class="text h-20 d-flex align-items-end">￥<%= @takeout_item.tax_price %></p>
               <p class="text  justify h-40 mb-0"><%= @takeout_item.takeout_details %></p>
+              <%= form_with model: @cart_item do |f| %>
+                <%= f.select :amount, *[1..10], class: "form-select" %>
+                <%= f.hidden_field :takeout_item_id, :value => @takeout_item.id  %>
+                <%= f.submit "カートに入れる", class: "btn-color" %>
+              <% end %>
             </div>
           </div>
         </div>
