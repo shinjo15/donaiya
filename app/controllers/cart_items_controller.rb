@@ -1,10 +1,10 @@
 class CartItemsController < ApplicationController
   def index
   end
-  
+
   def create
     @cart_item = CartItem.new(cart_item_params)
-    @cart_items = current_cart.cart_items.all
+    @cart_items = current_cart.cart_item.all
     if CartItem.find_by(item_id: params[:cart_item][:item_id], customer_id: current_customer.id )
       @sam = CartItem.find_by(item_id: params[:cart_item][:item_id], customer_id: current_customer.id )
       new_amount = @sam.amount + @cart_item.amount
@@ -20,6 +20,6 @@ class CartItemsController < ApplicationController
   private
 
   def cart_item_params
-    params.require(:cart_item).permit(:item_id, :amount)
+    params.require(:cart_item).permit(:takeout_item_id, :amount)
   end
 end

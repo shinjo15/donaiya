@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   devise_for :admins
   root to: 'homes#top'
   get 'homes/admin_top'
-  get 'carts/new'
+  get '/my_cart' => 'carts#my_cart'
+  post '/add_item' => 'carts#add_item'
+  post '/update_item' => 'carts#update_item'
+  delete '/delete_item' => 'carts#delete_item'
   resources :notices, only: [:new, :create, :edit, :show, :update, :destroy]
   get 'orders/confirm'
   get 'orders/complete'
