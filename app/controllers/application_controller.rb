@@ -9,15 +9,18 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(resource)
     root_path
   end
-  
-  def current_cart
-    current_cart = Cart.find_by(id: session[:cart_id]) || Cart.create
-    session[:cart_id] ||= current_cart.id
-  end
+
 
   protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
+  end
+
+  def current_cart
+    @current_cart = Cart.find_by(id: session[:cart_id])
+    @current_cart = Cart.create unless @current_cart
+    session[:cart_id] = @current_cart.id
+    @current_cart
   end
 end
