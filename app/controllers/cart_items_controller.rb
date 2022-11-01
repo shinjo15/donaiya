@@ -1,21 +1,14 @@
 class CartItemsController < ApplicationController
   def index
+    @cart_items = CartItem.all
   end
 
   def create
    cart = current_cart
    takeout_item = TakeoutItem.find(params[:takeout_item_id])
    @buy_item = cart.add_takeout_item(takeout_item.id)
-
-   respond_to do |format|
-    if @buy_item.save
-      format.html{redirect_to root}
-      format.json{render :show, status: :created, location: @buy_item}
-    else
-      format.html {redirect_to takeout_item_path}
-      format.json{render json: @buy_item}
-    end
-   end
+   @buy_item.save
+   redirect_to cart_items_path
   end
 
   private

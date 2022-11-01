@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   get 'orders/complete'
   resources :orders, only: [:new, :create, :show, :update]
   delete 'cart_items/destroy_all'
-  resources :cart_items, only: [:index, :create, :update, :destroy]
-  resources :takeout_items
+  resources :takeout_items do
+     resources :cart_items, only: [:index, :create, :update, :destroy]
+  end
   resources :recommendations
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
