@@ -14,11 +14,17 @@ class CartItemsController < ApplicationController
     @buy_item.save
     redirect_to takeout_item_cart_items_path
   end
-  
+
   def destroy
     buy_item = CartItem.find(params[:id])
     buy_item.destroy
     redirect_to takeout_item_cart_items_path
+  end
+
+  def destroy_all
+    cart = current_cart
+    cart.cart_items.destroy_all
+    redirect_to takeout_item_cart_items_path(cart.id)
   end
 
   private

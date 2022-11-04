@@ -7,8 +7,8 @@
       </div>
     </div>
   </div>
-    <div class="row mx-0">
-      <div class="w-80 mx-auto">
+  <div class="row mx-0">
+    <div class="w-80 mx-auto">
       <table>
         <thead class="col-12 border-bottom border-light">
           <th class="col-3"></th>
@@ -24,12 +24,18 @@
             <td><p class="middle d-flex justify-content-center"><%= cart_item.takeout_item.takeout_name %></p></td>
             <td><p class="middle d-flex justify-content-center"><%= cart_item.amount %></p></td>
             <td><p class="middle d-flex justify-content-center"><%= cart_item.takeout_item.tax_price %>円</p></td>
-            <td><%= link_to "削除", takeout_item_cart_item_path(cart_item.takeout_item_id, cart_item.id), method: :delete, class: 'btn btn-danger' %></td>
+            <td><%= link_to "削除", takeout_item_cart_item_path(cart_item.takeout_item_id, cart_item.id), method: :delete, class: 'btn-delete' %></td>
           </tr>
         <% end %>
         </tbody>
       </table>
     </div>
-    </div>
+  </div>
+  <div class="row w-80 mx-auto">
+    <p class="w-100 title-margin text-right"><%= link_to  "カートの中身を空にする", cart_items_destroy_all_path, method: :delete, class: 'btn-delete radius-5' %></p>
+  </div>
+   <div class="row w-80 mx-auto">
+    <p class="w-100 title-margin text-center"><%= link_to  "予約情報入力", cart_items_destroy_all_path, method: :delete %></p>
+    <p class="w-100 title-margin text-right"><%= link_to  "予約情報入力", cart_items_destroy_all_path, method: :delete, class: 'btn-color radius-5' %></p>
   </div>
 </div>
