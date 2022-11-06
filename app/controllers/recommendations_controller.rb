@@ -6,7 +6,7 @@ class RecommendationsController < ApplicationController
 
   def create
     food = Recommendation.new(recommendations_params)
-    food.save
+    food.save!
     redirect_to edit_recommendation_path(food.id)
   end
 
