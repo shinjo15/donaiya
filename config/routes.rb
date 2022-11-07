@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   get 'homes/admin_top'
   resources :notices, only: [:new, :create, :edit, :show, :update, :destroy]
-  get 'orders/confirm'
+  post 'orders/confirm'
   get 'orders/complete'
   resources :orders, only: [:new, :create, :show, :update]
   delete 'cart_items/destroy_all'

@@ -26,7 +26,7 @@
                 <div class="card-body">
                   <p class="card-title middle"><small><%= t.takeout_name %></small></p>
                   <p class="card-text text"><%= t.tax_price %>円<%= link_to "編集", edit_takeout_item_path(t.id), class: "ml-4 btn btn-outline-success" %></p>
-                  <p class="card-text text"><small class="text-muted"><%= t.takeout_details %></small></p>
+                  <p class="card-text text"><small><%= t.takeout_details %></small></p>
                 </div>
               </div>
             </div>

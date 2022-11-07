@@ -3,31 +3,30 @@
   <div class="row my-40 mx-0", style="height: 150px;">
     <div class="col-8 p-0 h-100 mx-auto border-bottom border-light">
       <div class="h-100">
-        <h1 class="title h-100 d-flex align-items-center justify-content-center">ご予約情報確認</h1>
+        <h1 class="title text-light h-100 d-flex align-items-center justify-content-center">ご予約情報確認</h1>
       </div>
     </div>
-    <%= form_with model: @order, url: orders_confirm_path, method: :post do |f| %>
-        <div class="row mb-2">
-          <label class="ml-5 col-2 small d-flex align-items-center">お名前</label>
-          <%= f.text_field :name, class: "col-3 form-control", placeholder: "令和道子" %>
-        </div>
-        <div class="row mb-2">
-          <label class="ml-5 col-2 small d-flex align-items-center">電話番号</label>
-          <%= f.text_field :telephone_number, class: "col-6 form-control", placeholder: "00000000000" %>
-        </div>
-        <div class="row mb-4">
-          <label class="ml-5 col-2 small d-flex align-items-center">受け取り日時</label>
-          <%= f.datetime_select :receipt_datetime, class: "col-3 form-control" %>
-        </div>
-         <div class="row mb-4">
-          <label class="ml-5 col-2 small d-flex align-items-center">ご要望</label>
-          <%= f.text_field :request, class: "col-3 form-control", placeholder: "場合によってはご要望に添えない場合があります" %>
-        </div>
-
-<div class="row">
-    <%= f.submit "確認画面に進む", class: "m-auto btn btn-primary" %>
-</div>
-<% end %>
-</div>
   </div>
+    <%= form_with model: @order, url: orders_confirm_path do |f| %>
+      <div class="row w-60 mx-auto mb-5">
+        <%= f.label :"お名前", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
+        <%= f.text_field :name, class: "col-5 form-control", placeholder: "令和道子" %>
+      </div>
+      <div class="row w-60 mx-auto mb-5">
+        <%= f.label :"電話番号", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
+        <%= f.text_field :telephone_number, class: "col-5 form-control", placeholder: "00000000000" %>
+      </div>
+      <div class="row w-60 mx-auto mb-5">
+        <%= f.label :"受け取り日時", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
+        <%= f.datetime_select :receipt_datetime, class: "col-5 form-control" %>
+      </div>
+      <div class="row w-60 mx-auto mb-5">
+        <%= f.label :"ご要望", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
+        <%= f.text_field :request, class: "col-5 form-control", placeholder: "場合によってはご要望に添えない場合があります", style: "height: 150px" %>
+      </div>
+      <div class="row w-60 mx-auto">
+        <p class="w-100 title-margin text-right"><%= f.submit "予約情報確認", class: "btn-color radius-5" %></p>
+      </div>
+    <% end %>
+</div>
 
