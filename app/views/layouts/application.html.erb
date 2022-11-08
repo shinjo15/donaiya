@@ -41,19 +41,28 @@
                 </li>
               <% else %>
                 <li class="nav-item ml-4">
-                  <%= link_to "Home",class: 'text nav-link' %>
+                  <a class="navbar-brand" href="/">
+                    <span class="text nav-link">Home</span>
+                  </a>
+                <li class="nav-item ml-4">
+                  <a class="navbar-brand" href="#about">
+                    <span class="text nav-link">About</span>
+                  </a>
                 </li>
                 <li class="nav-item ml-4">
-                  <%= link_to "About",class: 'text nav-link' %>
+                 <a class="navbar-brand" href="#recommends">
+                    <span class="text nav-link">Menu</span>
+                  </a>
                 </li>
                 <li class="nav-item ml-4">
-                  <%= link_to "Menu",class: 'text nav-link' %>
-                </li>
-                <li class="nav-item ml-4">
-                  <%= link_to "Takeout", class: 'text nav-link' %>
+                 <a class="navbar-brand" href="#takeout">
+                    <span class="text nav-link">Takeout</span>
+                  </a>
                 </li>
                 <li class="nav-item mx-4">
-                  <%= link_to "News", class: 'text nav-link' %>
+                  <a class="navbar-brand" href="#notice">
+                    <span class="text nav-link">News</span>
+                  </a>
                 </li>
               <% end %>
             </ul>
