@@ -39,18 +39,17 @@
   </div>
    <div class="row w-80 pb-5 mx-auto">
      <span class="col-4"></span>
-    <p class="col-4 title-margin text-center"><%= link_to  "予約情報入力に戻る", new_order_path%></p>
-    <p class="col-4 title-margin text-right">
+    <p class="col-4 title-margin text-center"><%= link_to  "予約情報入力に戻る", new_order_path %></p>
       <%= form_with model: @order, url: orders_path, method: :post do |f| %>
-      <% binding.pry%>
-        <%= f.hidden_field :cart_id, :value => @cart_items.cart_id %>
+        <%= f.hidden_field :cart_id, :value => @current_cart.id %>
 	      <%= f.hidden_field :name, :value => @order.name %>
 	      <%= f.hidden_field :telephone_number, :value => @order.telephone_number %>
 	      <%= f.hidden_field :receipt_datetime, :value => @order.receipt_datetime %>
 	      <%= f.hidden_field :request, :value => @order.request %>
 	      <%= f.hidden_field :payment_amount, :value => @total %>
-	      <%= f.submit '注文を確定する', class: "btn-color radius-5" %>
+	      <p class="col-4 title-margin text-right">
+	        <%= f.submit '注文を確定する', class: "btn-color radius-5" %>
+	      </p>
       <% end %>
-    </p>
   </div>
 </div>
