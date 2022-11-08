@@ -1,6 +1,7 @@
 class CartItemsController < ApplicationController
   def index
-    @cart_items = CartItem.all
+    @cart_items = current_cart.cart_items.all
+    @total = @cart_items.inject(0) { |sum, item| sum + item.sum_of_price }.to_i
   end
 
   def create

@@ -1,2 +1,56 @@
-<h1>Orders#confirm</h1>
-<p>Find me in app/views/orders/confirm.html.erb</p>
+<div class="container-fluid p-0 background-gradient">
+  <div class="under-header"></div>
+  <div class="row my-40 mx-0", style="height: 150px;">
+    <div class="col-8 p-0 h-100 mx-auto border-bottom border-light">
+      <div class="h-100">
+        <h1 class="title text-light h-100 d-flex align-items-center justify-content-center">ご予約情報確認</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row mx-0">
+    <div class="w-60 mx-auto">
+      <table>
+        <thead class="col-12 border-bottom border-light">
+          <th class="col-3"></th>
+          <th class="col-3"><p class="text text-light d-flex justify-content-center">商品情報</p></th>
+          <th class="col-3"><p class="text text-light d-flex justify-content-center">個数</p></th>
+          <th class="col-3"><p class="text text-light d-flex justify-content-center">支払金額</p></th>
+        </thead>
+        <tbody>
+        <% @cart_items.each do |cart_item| %>
+          <tr class="border-bottom border-light">
+            <td class="my-2"><%= image_tag cart_item.takeout_item.image, size: "300x225" %></td>
+            <td><p class="middle text-light d-flex justify-content-center"><%= cart_item.takeout_item.takeout_name %></p></td>
+            <td><p class="middle text-light d-flex justify-content-center"><%= cart_item.amount %></p></td>
+            <td><p class="middle text-light d-flex justify-content-center"><%= cart_item.takeout_item.tax_price %>円</p></td>
+            <% (cart_item.sum_of_price).floor.to_s(:delimited) %>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row w-80 mx-auto title-margin">
+    <span class="col-10 text-right text text-light">商品合計:￥</span><p class="col-2 text text-light"><%= @total.round.to_s(:delimited) %></p>
+    <span class="col-10 text-right text text-light">お名前:</span><p class="col-2 text text-light"><%= @order.name %></p>
+    <span class="col-10 text-right text text-light">電話番号:</span><p class="col-2 text text-light"><%= @order.telephone_number %></p>
+    <span class="col-10 text-right text text-light">受け取り日時:</span><p class="col-2 text text-light"><%= @order.receipt_datetime %></p>
+    <span class="col-10 text-right text text-light">ご要望:</span><p class="col-2 text text-light"><%= @order.request %></p>
+  </div>
+   <div class="row w-80 pb-5 mx-auto">
+     <span class="col-4"></span>
+    <p class="col-4 title-margin text-center"><%= link_to  "予約情報入力に戻る", new_order_path%></p>
+    <p class="col-4 title-margin text-right">
+      <%= form_with model: @order, url: orders_path, method: :post do |f| %>
+      <% binding.pry%>
+        <%= f.hidden_field :cart_id, :value => @cart_items.cart_id %>
+	      <%= f.hidden_field :name, :value => @order.name %>
+	      <%= f.hidden_field :telephone_number, :value => @order.telephone_number %>
+	      <%= f.hidden_field :receipt_datetime, :value => @order.receipt_datetime %>
+	      <%= f.hidden_field :request, :value => @order.request %>
+	      <%= f.hidden_field :payment_amount, :value => @total %>
+	      <%= f.submit '注文を確定する', class: "btn-color radius-5" %>
+      <% end %>
+    </p>
+  </div>
+</div>
