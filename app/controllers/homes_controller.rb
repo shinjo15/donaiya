@@ -7,5 +7,6 @@ class HomesController < ApplicationController
 
   def admin_top
     @order_details = OrderDetail.all
+    @takeout_items = TakeoutItem.all
   end
 end
