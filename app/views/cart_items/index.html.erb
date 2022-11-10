@@ -1,13 +1,14 @@
 <div class="container-fluid p-0 background-gradient">
   <div class="under-header"></div>
-  <div class="row my-40 mx-0 title-bar">
+  <section class="row my-40 mx-0 title-bar">
     <div class="col-8 p-0 h-100 mx-auto about-image">
       <div class="h-100 sub-title">
         <h1 class="title h-100 d-flex align-items-center justify-content-center">CART </h1>
       </div>
     </div>
-  </div>
-  <div class="row mx-0">
+  </section>
+  
+  <section class="row mx-0">
     <div class="w-60 mx-auto">
       <table>
         <thead class="col-12 border-bottom border-light">
@@ -31,14 +32,17 @@
         </tbody>
       </table>
     </div>
-  </div>
+  </section>
+  
   <div class="row w-80 mx-auto">
     <p class="w-100 title-margin text-right"><%= link_to  "カートの中身を空にする", cart_items_destroy_all_path, method: :delete, class: 'btn-delete radius-5' %></p>
   </div>
+  
   <div class="row w-80 mx-auto">
     <span class="col-12 title-margin text-right"><p class="text text-light">商品合計:￥<%= @total.round.to_s(:delimited)  %></p></span>
   </div>
-   <div class="row w-80 mx-auto">
+  
+  <div class="row w-80 mx-auto">
      <span class="col-4"></span>
     <p class="col-4 title-margin text-center"><%= link_to  "買い物に戻る", takeout_items_path%></p>
     <p class="col-4 title-margin text-right"><%= link_to  "予約情報入力", new_order_path, class: 'btn-color radius-5' %></p>

@@ -1,11 +1,12 @@
-<div class="container-fluid title-margin title-bar">
+<section class="container-fluid title-margin title-bar">
   <div class="row h-100">
     <div class="col-8 h-100 mx-auto title-textbox">
       <div class="title h-100 d-flex align-items-center justify-content-center"><h1>お知らせ編集</h1></div>
     </div>
   </div>
-</div>
-<div class="container my-40">
+</section>
+
+<section class="container my-40">
   <div class="my-40">
     <%= form_with model: @notice, url: notice_path do |f| %>
       <div class="row mb-4">
@@ -24,5 +25,5 @@
     <% end %>
     <span class="d-flex justify-content-center"><%= link_to "更新せずに戻る", new_notice_path, class: "col-4 btn btn-outline-dark" %></span>
   </div>
-</div>
+</section>
 

@@ -6,16 +6,13 @@
     <h2 class="mx-auto my-40">管理者ログイン</h2>
   </div>
 
-
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
    <div class="row mb-2">
       <%= f.label :"メールアドレス", class: "mx-auto" %>
     </div>
     <div class="row mb-4">
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "mx-auto col-3 form-control", placeholder: "sample@example.com" %>
     </div>
-
     <div class="row mb-2">
       <%= f.label :"パスワード", class: "mx-auto" %>
     </div>
@@ -30,7 +27,7 @@
   <!--  </div>-->
   <!--<% end %>-->
 
- <div class="row my-40">
+    <div class="row my-40">
       <%= f.submit "ログイン", class: "col-1 btn btn-success mx-auto" %>
     </div>
   <% end %>

@@ -1,13 +1,14 @@
 <div class="container-fluid p-0 mx-0">
-  <div class="row relative">
+  <section class="row relative">
     <div class="col-6 top-image"></div>
     <div class="col-6 top-image"></div>
     <div class="top-textbox">
       <div class="title h-100 d-flex align-items-center justify-content-center"><h1>ねむび屋</h1></div>
     </div>
-  </div>
+  </section>
+  
   <div class="p-0 background-gradient">
-    <div class="row w-85 mx-auto about-padding">
+    <section class="row w-85 mx-auto about-padding">
       <div class="col-sm-6">
         <h2 class="title text-light mb-5"><a name="about">About</a></h2>
         <h3 class="middle text-light mb-140">韓国風居酒屋ねむび屋</h3>
@@ -27,15 +28,17 @@
       <div class="col-sm-6 mt-3">
         <%= image_tag "cropPAKS_BISTROtennai.jpg", class: "w-85"%>
       </div>
-    </div>
-    <div class="row my-40 mx-0 title-bar">
+    </section>
+    
+    <section class="row my-40 mx-0 title-bar">
       <div class="col-8 p-0 h-100 mx-auto about-image">
         <div class="h-100 sub-title">
           <div class="title h-100 d-flex align-items-center justify-content-center"><h1><a name="recommends">今月のおすすめ</a></h1></div>
         </div>
       </div>
-    </div>
-    <div class="row w-60 mx-auto about-padding">
+    </section>
+    
+    <section class="row w-60 mx-auto about-padding">
       <table class="w-100">
         <% @foods.each do |food| %>
           <tr class="border-bottom border-light recommends">
@@ -51,15 +54,17 @@
       <div class="row w-100">
         <p class="w-100 title-margin text-right"><%= link_to "メニューを見る", recommendations_path, class: "btn-color" %></p>
       </div>
-    </div>
-    <div class="row my-40 mx-0 title-bar">
+    </section>
+    
+    <section class="row my-40 mx-0 title-bar">
       <div class="col-8 p-0 h-100 mx-auto about-image">
         <div class="h-100 sub-title">
           <div class="title h-100 d-flex align-items-center justify-content-center"><h1><a name="takeout">TAKEOUT</a></h1></div>
         </div>
       </div>
-    </div>
-    <div class="takeout-back my-80">
+    </section>
+    
+    <section class="takeout-back my-80">
       <div class="row w-85 mx-auto">
         <% @takeout_items.each do |takeout_item| %>
           <div class="col-4">
@@ -72,31 +77,34 @@
       <div class="row w-100">
         <p class="w-100 title-margin text-center"><%= link_to "TAKEOUT商品を見る", takeout_items_path, class: "btn-color" %></p>
       </div>
-    </div>
+    </section>
+    
     <hr class="m-0 bg-light">
-    <div class="row  mx-0 my-40">
+    
+    <section class="row  mx-0 my-40">
       <div class="col-8 p-0 h-100 mx-auto">
         <div class="title text-light h-100 d-flex align-items-center justify-content-center"><h1><a name="notice">お知らせ</a></h1></div>
       </div>
-    </div>
-    <div class="row w-85 mx-auto">
+    </section>
+    
+    <section class="row w-85 mx-auto">
       <div class="row w-100 mx-0 my-40">
         <% @notices.each do |notice| %>
-        <%= link_to notice_path(notice.id), class: "row col-12 p-0 text-dark" do  %>
-          <div class="card w-100 mb-3">
-            <div class="card-body">
-              <div class="row">
-                <h3 class="middle col-9"><%= notice.title %></h3>
-              <p class="text col-3 d-flex align-items-center justify-content-center"><small><%= notice.updated_at %></small></p>
+          <%= link_to notice_path(notice.id), class: "row col-12 p-0 text-dark" do  %>
+            <div class="card w-100 mb-3">
+              <div class="card-body">
+                <div class="row">
+                  <h3 class="middle col-9"><%= notice.title %></h3>
+                  <p class="text col-3 d-flex align-items-center justify-content-center"><small><%= notice.updated_at %></small></p>
+                </div>
               </div>
             </div>
-          </div>
           <% end %>
         <% end %>
       </div>
       <div class="row w-100 mx-0 mb-140">
         <p class="w-100 title-margin text-center"><%= link_to "Topへ戻る", root_path, class: "btn-color" %></p>
       </div>
-    </div>
+    </section>
   </div>
 </div>
