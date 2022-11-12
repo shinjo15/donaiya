@@ -15,14 +15,14 @@
           <div class="card mb-3">
             <div class="row">
               <div class="col-12">
-                <p class="card-title middle"><%= order.name %><%= order.receipt_datetime %></p>
+                <p class="card-title middle"><%= order.name %></br><%= order.receipt_datetime %></p>
               </div>
             </div>
             <div class="row">
               <div class="col-6 col-sm-6">
                 <div class="card-body">
-                  <% order.order_details.each do |order_detail| %>
-                    <p class="card-text text"><small><%= order_detail.takeout_item.takeout_name %><%= order_detail.takeout_item.tax_price %>円</small></p>
+                  <% order.takeout_items.each do |takeout_item| %>
+                    <p class="card-text text"><small><%= takeout_item.takeout_name %><%= takeout_item.tax_price %>円</small></p>
                   <% end %>
                 </div>
               </div>
@@ -31,7 +31,7 @@
         <% end %>
       </div>
     </section>
-    
+
     <section class="col-sm-6">
       <div class="m-5">
         <%=link_to "Menu管理画面へ", new_recommendation_path, class: "col-10 btn btn-outline-success btn-lg my-4" %>
