@@ -15,19 +15,21 @@
   <div class="takeout-items-back w-80 mx-auto">
     <div class="row mx-0">
       <% @takeout_items.each do |t| %>
-        <%=link_to takeout_item_path(t.id),class: "takeout-card  mx-auto mb-5" do%>
-          <div class="row mx-0">
-            <div class="col-6 p-0">
-              <%= image_tag t.image, size: "400x300" %>
-            </div>
-            <div class="col-6 p-0">
-              <div class="card-body h-100">
-                <h2 class="card-title middle"><%= t.takeout_name %></h2>
-                <hr class="m-0 bg-dark">
-                <p class="card-text text card-text-margin">￥<%= t.tax_price %></p>
+        <% if t.is_active == false %>
+          <%=link_to takeout_item_path(t.id),class: "takeout-card  mx-auto mb-5" do %>
+            <div class="row mx-0">
+              <div class="col-6 p-0">
+                <%= image_tag t.image, size: "400x300" %>
+              </div>
+              <div class="col-6 p-0">
+                <div class="card-body h-100">
+                  <h2 class="card-title middle"><%= t.takeout_name %></h2>
+                  <hr class="m-0 bg-dark">
+                  <p class="card-text text card-text-margin">￥<%= t.tax_price %></p>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
       <% end %>
     </div>

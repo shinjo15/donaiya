@@ -20,7 +20,7 @@
         <% @cart_items.each do |cart_item| %>
           <tr class="border-bottom border-light">
             <td class="my-2"><%= image_tag cart_item.takeout_item.image, size: "300x225" %></td>
-            <td><p class="middle text-light d-flex justify-content-center"><%= cart_item.takeout_item.takeout_name %></p></td>
+            <td><p class="middle pl-2 text-light d-flex justify-content-center"><%= cart_item.takeout_item.takeout_name %></p></td>
             <td><p class="middle text-light d-flex justify-content-center"><%= cart_item.amount %></p></td>
             <td><p class="middle text-light d-flex justify-content-center"><%= cart_item.takeout_item.tax_price %>円</p></td>
             <% (cart_item.sum_of_price).floor.to_s(:delimited) %>

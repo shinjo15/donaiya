@@ -6,7 +6,7 @@ class TakeoutItemsController < ApplicationController
 
   def create
     takeout_item = TakeoutItem.new(takeout_items_params)
-    takeout_item.save
+    takeout_item.save!
     redirect_to edit_takeout_item_path(takeout_item.id)
   end
 
