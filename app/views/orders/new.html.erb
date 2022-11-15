@@ -18,7 +18,7 @@
       </div>
       <div class="row w-60 mx-auto mb-5">
         <%= f.label :"受け取り日時", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
-        <%= f.datetime_select :receipt_datetime, class: "col-5 form-control" %>
+        <%= f.datetime_select :receipt_datetime, {:use_month_numbers => true}, class: "col-1 form-control" %>
       </div>
       <div class="row w-60 mx-auto mb-5">
         <%= f.label :"ご要望", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
