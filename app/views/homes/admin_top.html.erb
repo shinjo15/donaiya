@@ -22,7 +22,7 @@
               <div class="col-6 col-sm-6">
                 <div class="card-body">
                   <% order.order_details.each do |order_detail| %>
-                    <p class="card-text text"><small><%= order_detail.price %>円</small></p>
+                    <p class="card-text text"><small><%= order_detail.takeout_neme %><%= order_detail.amount %></small></p>
                   <% end %>
                 </div>
               </div>

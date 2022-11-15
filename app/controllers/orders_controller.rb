@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
 
   def complete
   end
-  
+
   def create
     @order = Order.new(order_params)
     @order.save!
@@ -20,6 +20,7 @@ class OrdersController < ApplicationController
     @cart_items.each do |cart_item|
       order_detail = OrderDetail.new
       order_detail.order_id = @order.id
+      order_detail.takeout_neme = cart_item.takeout_item.takeout_name
       order_detail.price = cart_item.takeout_item.tax_price
       order_detail.amount = cart_item.amount
       order_detail.save!
@@ -27,7 +28,7 @@ class OrdersController < ApplicationController
     end
     redirect_to orders_complete_path
   end
-  
+
   def order_params
     params.require(:order).permit(:cart_id, :name, :telephone_number, :receipt_datetime, :request, :payment_amount)
   end
