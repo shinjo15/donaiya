@@ -30,6 +30,10 @@
     <div class="col-sm-5">
       <h2 class="middle">新規登録</h2>
       <div class="my-40">
+        <% if @food.errors.any? %>
+          <%= @food.errors.count %>件のエラーが発生しました
+        <% end %>
+
         <%= form_with model: @food, url: recommendations_path do |f| %>
           <div class="row mb-4">
             <label class="col-4 d-flex align-items-center"><b>料理画像</b></label>

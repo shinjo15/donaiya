@@ -5,9 +5,13 @@ class RecommendationsController < ApplicationController
   end
 
   def create
-    food = Recommendation.new(recommendations_params)
-    food.save!
-    redirect_to edit_recommendation_path(food.id)
+    @food = Recommendation.new(recommendations_params)
+    if @food.save
+      redirect_to edit_recommendation_path(@food.id)
+    else
+      @foods = Recommendation.all
+      render :new
+    end
   end
 
   def index
