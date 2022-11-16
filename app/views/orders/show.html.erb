@@ -1,0 +1,50 @@
+<section class="container-fluid title-margin title-bar">
+  <div class="row h-100">
+    <div class="col-8 h-100 mx-auto title-textbox">
+      <div class="title h-100 d-flex align-items-center justify-content-center"><h1>TAKEOUT予約確認</h1></div>
+    </div>
+  </div>
+</section>
+
+<section class="container my-40">
+  <div class="row mb-3">
+    <div class="col-3"><p class="text">お名前</p></div>
+    <div class="col-9"><p class="middle"><%= @order.name %>様</p></div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-3"><p class="text">お電話番号</p></div>
+    <div class="col-9"><p class="middle"><%= @order.telephone_number %></p></div>
+  </div>
+   <div class="row mb-3">
+    <div class="col-3"><p class="text">ご要望</p></div>
+    <div class="col-9"><p class="text"><%= @order.request %></p></div>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col-3"><p class="text">商品名</p></th>
+        <th class="col-3"><p class="text">金額</p></th>
+        <th class="col-3"><p class="text">個数</p></th>
+        <th class="col-3"><p class="text">合計金額</p></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order.order_details.each do |order| %>
+        <tr>
+          <td class="px-3"><p class="text"><%= order.takeout_neme %></p></td>
+          <td class="px-3"><p class="text"><%= order.price %>円</p></td>
+          <td class="px-3"><p class="text"><%= order.amount %>こ</td>
+          <td class="px-3"><p class="text"><%= order.price*order.amount %>円</p></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="row mt-5">
+    <div class="col-3"><p class="text">お支払金額</p></div>
+    <div class="col-9"><p class="middle"><%= @order.payment_amount %>円</p></div>
+  </div>
+  <div class="row w-100">
+    <p class="w-100 title-margin text-right"><%= link_to "削除", order_path(@order.id), method: :delete, class: "btn-delete", "data-confirm" => "本当に削除しますか？"  %></p>
+  </div>
+</section>

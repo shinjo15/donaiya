@@ -19,8 +19,8 @@
       </div>
       <div class="row mt-5 mb-140">
         <div class="col-4"></div>
-        <div class="col-4"><%= f.submit "更新", class: "col-6 btn btn-success" %></div>
-        <div class="col-4"><%= link_to "削除", notice_path(@notice.id), method: :delete, class: "col-6 btn btn-danger", "data-confirm" => "本当に削除しますか？"  %></div>
+        <div class="col-4"><%= f.submit "更新", class: "btn-color" %></div>
+        <div class="col-4 d-flex align-items-center"><%= link_to "削除", notice_path(@notice.id), method: :delete, class: "btn-delete", "data-confirm" => "本当に削除しますか？"  %></div>
       </div>
     <% end %>
     <span class="d-flex justify-content-center"><%= link_to "更新せずに戻る", new_notice_path, class: "col-4 btn btn-outline-dark" %></span>

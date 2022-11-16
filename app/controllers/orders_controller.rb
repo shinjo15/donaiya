@@ -29,6 +29,16 @@ class OrdersController < ApplicationController
     redirect_to orders_complete_path
   end
 
+  def show
+    @order = Order.find(params[:id])
+  end
+
+  def destroy
+    order = Order.find(params[:id])
+    order.destroy
+    redirect_to homes_admin_top_path
+  end
+
   def order_params
     params.require(:order).permit(:cart_id, :name, :telephone_number, :receipt_datetime, :request, :payment_amount)
   end

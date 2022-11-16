@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :notices, only: [:new, :create, :edit, :show, :update, :destroy]
   post 'orders/confirm'
   get 'orders/complete'
-  resources :orders, only: [:new, :create, :show, :update]
+  resources :orders, only: [:new, :create, :show, :update, :destroy]
   delete 'cart_items/destroy_all'
   resources :takeout_items do
      resources :cart_items, only: [:index, :create, :update, :destroy]
