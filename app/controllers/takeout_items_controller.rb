@@ -5,9 +5,13 @@ class TakeoutItemsController < ApplicationController
   end
 
   def create
-    takeout_item = TakeoutItem.new(takeout_items_params)
-    takeout_item.save!
-    redirect_to edit_takeout_item_path(takeout_item.id)
+    @takeout_item = TakeoutItem.new(takeout_items_params)
+    if @takeout_item.save
+      redirect_to edit_takeout_item_path(@takeout_item.id)
+    else
+      @takeout_items = TakeoutItem.all
+      render :new
+    end
   end
 
   def index

@@ -31,7 +31,7 @@
       <h2 class="middle">新規登録</h2>
       <div class="my-40">
         <% if @food.errors.any? %>
-          <%= @food.errors.count %>件のエラーが発生しました
+          <p class="text text-danger"><b>全ての項目を入力してください</b></p>
         <% end %>
 
         <%= form_with model: @food, url: recommendations_path do |f| %>

@@ -3,17 +3,21 @@ class NoticesController < ApplicationController
     @notice = Notice.new
     @notices = Notice.all
   end
-  
+
   def create
-    notice = Notice.new(notices_params)
-    notice.save
-    redirect_to new_notice_path
+    @notice = Notice.new(notices_params)
+    if @notice.save
+      redirect_to edit_notice_path(@notice.id)
+    else
+      @notices = Notice.all
+      render :new
+    end
   end
 
   def edit
     @notice = Notice.find(params[:id])
   end
-  
+
   def update
     notice = Notice.find(params[:id])
     notice.update(notices_params)
@@ -23,13 +27,13 @@ class NoticesController < ApplicationController
   def show
     @notice = Notice.find(params[:id])
   end
-  
+
   def destroy
     notice = Notice.find(params[:id])
     notice.destroy
     redirect_to new_notice_path
   end
-  
+
   private
 
   def notices_params
