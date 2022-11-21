@@ -1,55 +1,43 @@
 // Place all the styles related to the takeout_items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.w-50{
+  width: 50%;
+}
+.h-80{
+  height: 80%;
+}
+.h-20{
+  height: 20%;
+}
+
 .attention{
   height: 160px;
   background-color: #fff;
 }
-
 .takeout-items-back{
   background-color: #111;
   padding: 50px;
 }
-
 .takeout-card{
   width: 800px;
   height: 300px;
   color: #000;
   background-color: #fff;
 }
-
-.h-80{
-  height: 70%;
-}
-
-.w-50{
-  width: 50%;
-}
-
-.h-80{
-  height: 80%;
-}
-
-.h-20{
-  height: 20%;
-}
-
-.takeout-padding{
- padding-top: 100px;
- padding-bottom: 410px;
-}
-
 .card-detail{
   width: 1200px;
   height: 525px;
   color: #000;
 }
-
 .card-text-margin{
  margin-top: 110px;
  margin-bottom: 40px;
 }
-
 .justify{
   text-align: justify;
+}
+.takeout-padding{
+ padding-top: 100px;
+ padding-bottom: 410px;
 }

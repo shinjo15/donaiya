@@ -6,7 +6,7 @@
       <div class="title h-100 d-flex align-items-center justify-content-center"><h1>ねむび屋</h1></div>
     </div>
   </section>
-  
+
   <div class="p-0 background-gradient">
     <section class="row w-85 mx-auto about-padding">
       <div class="col-sm-6">
@@ -29,15 +29,16 @@
         <%= image_tag "cropPAKS_BISTROtennai.jpg", class: "w-85"%>
       </div>
     </section>
-    
+
     <section class="row my-40 mx-0 title-bar">
-      <div class="col-8 p-0 h-100 mx-auto about-image">
+      <a name="recommends"></a>
+      <div class="col-8 p-0 h-100 mx-auto title-image-recommendation">
         <div class="h-100 sub-title">
-          <div class="title h-100 d-flex align-items-center justify-content-center"><h1><a name="recommends">今月のおすすめ</a></h1></div>
+          <div class="title h-100 d-flex align-items-center justify-content-center"><h1>今月のおすすめ</h1></div>
         </div>
       </div>
     </section>
-    
+
     <section class="row w-60 mx-auto about-padding">
       <table class="w-100">
         <% @foods.each do |food| %>
@@ -55,15 +56,16 @@
         <p class="w-100 title-margin text-right"><%= link_to "メニューを見る", recommendations_path, class: "btn-color" %></p>
       </div>
     </section>
-    
+
     <section class="row my-40 mx-0 title-bar">
-      <div class="col-8 p-0 h-100 mx-auto about-image">
+      <a name="takeout"></a>
+      <div class="col-8 p-0 h-100 mx-auto title-image">
         <div class="h-100 sub-title">
-          <div class="title h-100 d-flex align-items-center justify-content-center"><h1><a name="takeout">TAKEOUT</a></h1></div>
+          <div class="title h-100 d-flex align-items-center justify-content-center"><h1>TAKEOUT</h1></div>
         </div>
       </div>
     </section>
-    
+
     <section class="takeout-back my-80">
       <div class="row w-85 mx-auto">
         <% @takeout_items.each do |takeout_item| %>
@@ -78,15 +80,16 @@
         <p class="w-100 title-margin text-center"><%= link_to "TAKEOUT商品を見る", takeout_items_path, class: "btn-color" %></p>
       </div>
     </section>
-    
+
     <hr class="m-0 bg-light">
-    
+    <a name="notice"></a>
+
     <section class="row  mx-0 my-40">
       <div class="col-8 p-0 h-100 mx-auto">
-        <div class="title text-light h-100 d-flex align-items-center justify-content-center"><h1><a name="notice">お知らせ</a></h1></div>
+        <div class="title text-light h-100 d-flex align-items-center justify-content-center"><h1>お知らせ</h1></div>
       </div>
     </section>
-    
+
     <section class="row w-85 mx-auto">
       <div class="row w-100 mx-0 my-40">
         <% @notices.each do |notice| %>

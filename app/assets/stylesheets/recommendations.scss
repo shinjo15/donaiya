@@ -5,33 +5,29 @@
 th,td,label{
   color: #000;
 }
-
 .menu-title{
-height: 600px;
+height: 450px;
  background-color: #560D04;
 }
-
 .h-300{
   margin-top: 300px;
 }
 
+// --------------<ここから鍋料理のCSS>---------------
 .nabe-box{
   width: 1200px;
   height: 935px;
   margin-left: 100px;
   position: relative;
 }
-
 .nabe{
   background-color: #fff;
   margin: 0 10px 10px 0;
 }
-
 .nabe:first-child{
   width: 700px;
   height: 525px;
 }
-
 .nabe:nth-child(2){
   width: 490px;
   height: 250px;
@@ -43,7 +39,6 @@ height: 600px;
   background-size: cover;
   background-position: center;
 }
-
 .nabe:nth-child(3){
   width: 240px;
   height: 265px;
@@ -54,8 +49,6 @@ height: 600px;
   background-size: cover;
   background-position: center;
 }
-
-
 .nabe:nth-child(4){
   width: 240px;
   height: 415px;
@@ -67,7 +60,6 @@ height: 600px;
   background-size: cover;
   background-position: center;
 }
-
 .nabe:nth-child(5){
   width: 400px;
   height: 400px;
@@ -79,8 +71,6 @@ height: 600px;
   background-size: cover;
   background-position: center;
 }
-
-
 .nabe:nth-child(6){
   width: 540px;
   height: 400px;
@@ -92,7 +82,6 @@ height: 600px;
   background-size: cover;
   background-position: center;
 }
-
 .nabe:nth-child(7){
   width: 240px;
   height: 250px;
@@ -103,26 +92,21 @@ height: 600px;
   margin-right: 0;
 }
 
-
-
-// <ここから肉料理のCSS>
+// --------<ここから肉料理のCSS>-----------
 .niku-box{
   width: 1200px;
   height: 935px;
   margin: 0 100px 0 auto;
   position: relative;
 }
-
 .niku{
   background-color: #fff;
   margin: 0 10px 10px 0;
 }
-
 .niku:first-child{
   width: 700px;
   height: 525px;
 }
-
 .niku:nth-child(2){
  width: 240px;
  height: 350px;
@@ -133,7 +117,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .niku:nth-child(3){
  width: 240px;
  height: 240px;
@@ -145,7 +128,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .niku:nth-child(4){
  width: 240px;
  height: 165px;
@@ -154,7 +136,6 @@ height: 600px;
  left: 710px;
  margin-bottom: 0;
 }
-
 .niku:nth-child(5){
  width: 100px;
  height: 100px;
@@ -162,7 +143,6 @@ height: 600px;
  top: 525px;
  left: 850px;
 }
-
 .niku:nth-child(6){
  width: 240px;
  height: 375px;
@@ -174,7 +154,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .niku:nth-child(7){
  width: 300px;
  height: 400px;
@@ -186,7 +165,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .niku:nth-child(8){
  width: 530px;
  height: 400px;
@@ -198,7 +176,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .niku:nth-child(9){
  width: 350px;
  height: 300px;
@@ -212,18 +189,15 @@ height: 600px;
  background-position: center;
 }
 
-
-// <ここから韓国風料理のCSS>
+// ---------------<ここから韓国風料理のCSS>--------------
 .korea{
  background-color: #fff;
  margin: 0 10px 10px 0;
 }
-
 .korea:first-child{
  width: 700px;
  height: 525px;
 }
-
 .korea:nth-child(2){
  width: 490px;
  height: 250px;
@@ -235,7 +209,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .korea:nth-child(3){
  width: 240px;
  height: 265px;
@@ -246,7 +219,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .korea:nth-child(4){
  width: 240px;
  height: 415px;
@@ -258,7 +230,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .korea:nth-child(5){
  width: 400px;
  height: 190px;
@@ -269,7 +240,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .korea:nth-child(6){
  width: 290px;
  height: 190px;
@@ -280,7 +250,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .korea:nth-child(7){
  width: 240px;
  height: 190px;
@@ -291,7 +260,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .korea:nth-child(8){
  width: 250px;
  height: 200px;
@@ -303,7 +271,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .korea:nth-child(9){
  width: 250px;
  height: 200px;
@@ -315,7 +282,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .korea:nth-child(10){
  width: 430px;
  height: 200px;
@@ -327,7 +293,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .korea:nth-child(11){
  width: 240px;
  height: 250px;
@@ -338,37 +303,31 @@ height: 600px;
  margin-right: 0;
 }
 
-
-// <ここからサイドメニューのCSS>
+// -------------<ここからサイドメニューのCSS>------------
 .menu-back{
   background-color: #111;
   padding: 100px 0 100px 0;
   margin-top: 200px;
 }
-
 .menu-box{
   width: 1350px;
   height: 710px;
   margin: 0 auto;
   display: flex;
 }
-
 .side-menu-box{
  width: 680px;
  height: 710px;
  position: relative;
 }
-
 .side-menu{
  background-color: #fff;
  margin: 0 10px 10px 0;
 }
-
 .side-menu:first-child{
  width: 400px;
  height: 350px;
 }
-
 .side-menu:nth-child(2){
  width: 260px;
  height: 150px;
@@ -379,7 +338,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .side-menu:nth-child(3){
  width: 260px;
  height: 260px;
@@ -390,7 +348,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .side-menu:nth-child(4){
  width: 260px;
  height: 350px;
@@ -402,7 +359,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .side-menu:nth-child(5){
  width: 130px;
  height: 170px;
@@ -413,7 +369,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .side-menu:nth-child(6){
  width: 130px;
  height: 100px;
@@ -421,7 +376,6 @@ height: 600px;
  top: 430px;
  left: 410px;
 }
-
 .side-menu:nth-child(7){
  width: 270px;
  height: 170px;
@@ -432,7 +386,6 @@ height: 600px;
  background-size: cover;
  background-position: center;
 }
-
 .side-menu:nth-child(8){
  width: 120px;
  height: 280px;
@@ -444,19 +397,16 @@ height: 600px;
  background-position: center;
 }
 
-
-// <ここからドリンクのCSS>
+// ----------<ここからドリンクのCSS>------------
 .drink-box{
  width: 670px;
  height: 710px;
  position: relative;
 }
-
 .drink{
  background-color: #fff;
  margin: 0 10px 10px 0;
 }
-
 .drink:first-child{
  width: 400px;
  height: 350px;
@@ -464,7 +414,6 @@ height: 600px;
  top: 0px;
 left: 0px;
 }
-
 .drink:nth-child(2){
  width: 260px;
  height: 260px;
@@ -476,7 +425,6 @@ left: 0px;
  background-size: cover;
  background-position: center;
 }
-
 .drink:nth-child(3){
  width: 120px;
  height: 80px;
@@ -484,7 +432,6 @@ left: 0px;
  top: 270px;
  left: 410px;
 }
-
 .drink:nth-child(4){
  width: 260px;
  height: 220px;
@@ -495,7 +442,6 @@ left: 0px;
  background-size: cover;
  background-position: center;
 }
-
 .drink:nth-child(5){
  width: 260px;
  height: 220px;
@@ -506,7 +452,6 @@ left: 0px;
  background-size: cover;
  background-position: center;
 }
-
 .drink:nth-child(6){
  width: 130px;
  height: 310px;
@@ -518,7 +463,6 @@ left: 0px;
  background-size: cover;
  background-position: center;
 }
-
 .drink:nth-child(7){
  width: 400px;
  height: 120px;
@@ -530,7 +474,6 @@ left: 0px;
  background-size: cover;
  background-position: center;
 }
-
 .drink:nth-child(8){
  width: 260px;
  height: 120px;

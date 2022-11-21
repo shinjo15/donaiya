@@ -28,18 +28,64 @@
 h1,h2,h3,nav,p,label{
  font-family: 'Noto Serif JP', serif;
 }
-
 h2{
  margin: 0;
 }
-
-
+.title{
+ font-size: 50px;
+ letter-spacing: 1em;
+}
+.title:after {
+  content: " ";
+  margin-left: -1em;
+}
+.middle{
+ font-size: 30px;
+ letter-spacing: 0.5em;
+}
+.text{
+ font-size: 18px;
+ letter-spacing: 0.25em;
+}
 body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
+//----------マージン,高さ,横幅--------------
+.my-40{
+ margin: 40px 0;
+}
+.my-80{
+ margin: 80px 0;
+}
+.mt-80{
+ margin-top: 80px;
+}
+.mb-140{
+ margin-bottom: 140px;
+}
+.h-100{
+ height: 100%;
+}
+.h-50{
+ height: 50px
+}
+.w-100{
+ width: 100%;
+}
+.w-85{
+ width: 85%;
+}
+.w-80{
+ width: 80%;
+}
+.w-60{
+ width: 60%;
+}
+
+//-------ヘッダー----------
 header {
  position: fixed;
  top: 0;
@@ -47,152 +93,41 @@ header {
  width: 100%;
  z-index:10;
 }
-
 .under-header{
  padding-top: 71px;
 }
-
- .header-color{
-  background-color: rgba(0,0,0,0.1);
- }
-
- .header-text{
-  color: #000;
- }
-
- .nav-item a{
-   color: #000;
- }
-
+.header-color{
+ background-color: rgba(0,0,0,0.1);
+}
+.header-text{
+ color: #000;
+}
+.nav-item a{
+ color: #000;
+}
 .content{
  margin: 0;
 }
 
-.my-40{
- margin: 40px 0;
-}
-
-.my-80{
- margin: 80px 0;
-}
-
-.mt-80{
- margin-top: 80px;
-}
-
-.mb-140{
- margin-bottom: 140px;
-}
-
-footer {
-  position: sticky;
-  top: 100vh;
-  width: 100%;
-}
-
-.footer-color{
-  background-color: #560D04;
-  color: #fff;
-}
-
-
-.h-100{
- height: 100%;
-}
-
-.h-50{
- height: 50px
-}
-
-.h-100{
- height: 100%;
-}
-
-.w-100{
- width: 100%;
-}
-
-.w-85{
- width: 85%;
-}
-
-.w-80{
- width: 80%;
-}
-
-.w-60{
- width: 60%;
-}
-
-.about-padding{
- padding-top: 210px;
- padding-bottom: 410px;
-}
-
-.title{
- font-size: 50px;
- letter-spacing: 1em;
-}
-
-.middle{
- font-size: 30px;
- letter-spacing: 0.5em;
-}
-
-.text{
- font-size: 18px;
- letter-spacing: 0.25em;
-}
-
-.title-bar{
- height: 150px;
- background-color: #560D04;
-}
-
-.title-textbox{
- background-color: #111;
- color: #fff;
-}
-
-.title-margin{
- margin-top: 110px;
- margin-bottom: 40px;
-}
-
-.about-image{
- background-image: image-url('cropPAKS_BISTROtennai.jpg');
- background-size: cover;
- background-position: center;
-}
-
-table {
-  border-collapse: separate;
-  border-spacing: 70px;
-}
-
+//-----------メイン-----------
 .top-image{
  width: 100%;
  height: 100vh;
-
 }
-
 .top-image:first-child{
  background-image: image-url('E3CCDCC9-9ABA-4435-8FEC-EEFE5EF8E7ED.jpg');
  background-size: cover;
  background-position: center;
  z-index:-2;
 }
-
 .top-image:nth-child(2){
  background-image: image-url('06E6B9DF-843A-4F75-A797-FC6B13FC41B9.jpg');
  background-size: cover;
  z-index:-2;
 }
-
 .relative{
  position: relative;
 }
-
 .top-textbox{
  width: 400px;
  height: 200px;
@@ -203,19 +138,52 @@ table {
  left: 50%;
  transform: translate(-50%, -60%);
 }
-
 .background-gradient{
  background: linear-gradient(#111, #535353);
  z-index:-2;
 }
 
+.about-padding{
+ padding-top: 210px;
+ padding-bottom: 410px;
+}
+
+.title-image-recommendation{
+ background-image: image-url('nabe4.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.title-image-takeout{
+ background-image: image-url('nabe4.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.title-bar{
+ height: 150px;
+ background-color: #560D04;
+}
+.title-textbox{
+ background-color: #111;
+ color: #fff;
+}
+.title-margin{
+ margin-top: 110px;
+ margin-bottom: 40px;
+}
 .sub-title{
  background-color: rgba(17,17,17,0.8);
  color: #fff;
 }
 
-.recommends:nth-child(2n){
+.takeout-back{
+ background-color: #111;
+ padding: 30px 0;
+ margin-left: 70px;
+}
 
+table {
+  border-collapse: separate;
+  border-spacing: 70px;
 }
 
 .btn-color{
@@ -225,13 +193,6 @@ table {
  border-radius: 60px;
  border: 0px;
 }
-
-.takeout-back{
- background-color: #111;
- padding: 30px 0;
- margin-left: 70px;
-}
-
 .btn-delete{
  padding: 40px 50px;
  background-color: #560D04;
@@ -239,7 +200,18 @@ table {
  border-radius: 60px;
  border: 0px;
 }
-
 .radius-5{
   border-radius: 5px;
+}
+
+//------------フッター--------------
+footer {
+  position: sticky;
+  top: 100vh;
+  width: 100%;
+}
+
+.footer-color{
+  background-color: #560D04;
+  color: #fff;
 }
