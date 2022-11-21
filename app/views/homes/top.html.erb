@@ -1,4 +1,5 @@
 <div class="container-fluid p-0 mx-0">
+<!--------------------------<ここからTop画面>---------------------------------->
   <section class="row relative">
     <div class="col-6 top-image"></div>
     <div class="col-6 top-image"></div>
@@ -8,6 +9,7 @@
   </section>
 
   <div class="p-0 background-gradient">
+  <!--------------------------<ここからabout画面>---------------------------------->
     <section class="row w-85 mx-auto about-padding">
       <div class="col-sm-6">
         <h2 class="title text-light mb-5"><a name="about">About</a></h2>
@@ -30,6 +32,7 @@
       </div>
     </section>
 
+<!--------------------------<ここからrecommendeation画面>---------------------------------->
     <section class="row my-40 mx-0 title-bar">
       <a name="recommends"></a>
       <div class="col-8 p-0 h-100 mx-auto title-image-recommendation">
@@ -38,7 +41,6 @@
         </div>
       </div>
     </section>
-
     <section class="row w-60 mx-auto about-padding">
       <table class="w-100">
         <% @foods.each do |food| %>
@@ -57,15 +59,15 @@
       </div>
     </section>
 
+<!--------------------------<ここからtakeout画面>---------------------------------->
     <section class="row my-40 mx-0 title-bar">
       <a name="takeout"></a>
-      <div class="col-8 p-0 h-100 mx-auto title-image">
+      <div class="col-8 p-0 h-100 mx-auto title-image-takeout">
         <div class="h-100 sub-title">
           <div class="title h-100 d-flex align-items-center justify-content-center"><h1>TAKEOUT</h1></div>
         </div>
       </div>
     </section>
-
     <section class="takeout-back my-80">
       <div class="row w-85 mx-auto">
         <% @takeout_items.each do |takeout_item| %>
@@ -84,12 +86,12 @@
     <hr class="m-0 bg-light">
     <a name="notice"></a>
 
+<!--------------------------<ここからnotice画面>---------------------------------->
     <section class="row  mx-0 my-40">
       <div class="col-8 p-0 h-100 mx-auto">
         <div class="title text-light h-100 d-flex align-items-center justify-content-center"><h1>お知らせ</h1></div>
       </div>
     </section>
-
     <section class="row w-85 mx-auto">
       <div class="row w-100 mx-0 my-40">
         <% @notices.each do |notice| %>

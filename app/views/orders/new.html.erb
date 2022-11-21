@@ -9,19 +9,27 @@
   </div>
     <%= form_with model: @order, url: orders_confirm_path, method: :post do |f| %>
       <div class="row w-60 mx-auto mb-5">
-        <%= f.label :"お名前", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
+        <%= f.label :"お名前", class: "light col-4 pr-5 d-flex align-items-center justify-content-end" %>
         <%= f.text_field :name, class: "col-5 form-control", placeholder: "令和道子" %>
       </div>
       <div class="row w-60 mx-auto mb-5">
-        <%= f.label :"電話番号", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
+        <%= f.label :"電話番号", class: "light col-4 pr-5 d-flex justify-content-end" %>
         <%= f.text_field :telephone_number, class: "col-5 form-control", placeholder: "00000000000" %>
       </div>
+      <div class="row w-60 mx-auto">
+        <div class="col-4"></div>
+        <div class="col-1 px-0 d-flex align-items-center justify-content-end"><p class="light mb-0">年</p></div>
+        <div class="col-1 px-0 d-flex align-items-center justify-content-end"><p class="light mb-0">月</p></div>
+        <div class="col-1 px-0 mr-3 d-flex align-items-center justify-content-end"><p class="light mb-0">日</p></div>
+        <div class="col-1 px-0 d-flex align-items-center justify-content-end"><p class="light mb-0">時</p></div>
+        <div class="col-1 px-0 d-flex align-items-center justify-content-end"><p class="light mb-0">分</p></div>
+      </div>
       <div class="row w-60 mx-auto mb-5">
-        <%= f.label :"受け取り日時", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
+        <%= f.label :"受け取り日時", class: "light col-4 pr-5 d-flex align-items-center justify-content-end" %>
         <%= f.datetime_select :receipt_datetime, {:use_month_numbers => true}, class: "col-1 form-control" %>
       </div>
       <div class="row w-60 mx-auto mb-5">
-        <%= f.label :"ご要望", class: "col-4 pr-5 d-flex align-items-center justify-content-end" %>
+        <%= f.label :"ご要望", class: "light col-4 pr-5 d-flex align-items-center justify-content-end" %>
         <%= f.text_field :request, class: "col-5 form-control", placeholder: "場合によってはご要望に添えない場合があります", style: "height: 150px" %>
       </div>
       <div class="row w-60 mx-auto">
