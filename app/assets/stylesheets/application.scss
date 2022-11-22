@@ -25,11 +25,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 
-h1,h2,h3,nav,p,label{
+h1,h2,h3,nav,p,label,li{
  font-family: 'Noto Serif JP', serif;
 }
 h2{
  margin: 0;
+}
+ul{
+ list-style: none;
 }
 .title{
  font-size: 50px;
@@ -41,11 +44,19 @@ h2{
 }
 .middle{
  font-size: 30px;
- letter-spacing: 0.5em;
+ letter-spacing: .5em;
+}
+.middle:after {
+  content: " ";
+  margin-left: -.5em;
 }
 .text{
  font-size: 18px;
- letter-spacing: 0.25em;
+ letter-spacing: .25em;
+}
+.text:after {
+  content: " ";
+  margin-left: -.25em;
 }
 body {
   margin: 0;

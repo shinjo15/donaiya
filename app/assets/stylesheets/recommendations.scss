@@ -138,10 +138,12 @@ height: 450px;
 }
 .niku:nth-child(5){
  width: 100px;
- height: 100px;
+ height: 90px;
  position: absolute;
- top: 525px;
+ top: 535px;
  left: 850px;
+ background-color: #111;
+ border-radius: 15px;
 }
 .niku:nth-child(6){
  width: 240px;
@@ -161,7 +163,7 @@ height: 450px;
  top: 535px;
  left: 0px;
  margin-bottom: 0;
- background-image: image-url('niku2.jpg');
+ background-image: image-url('06E6B9DF-843A-4F75-A797-FC6B13FC41B9.jpg');
  background-size: cover;
  background-position: center;
 }
@@ -289,7 +291,7 @@ height: 450px;
  top: 735px;
  left: 520px;
  margin-bottom: 0;
- background-image: image-url('niku4.jpg');
+ background-image: image-url('korea9.jpg');
  background-size: cover;
  background-position: center;
 }
@@ -375,6 +377,7 @@ height: 450px;
  position: absolute;
  top: 430px;
  left: 410px;
+ border-radius: 15px;
 }
 .side-menu:nth-child(7){
  width: 270px;
@@ -431,6 +434,7 @@ left: 0px;
  position: absolute;
  top: 270px;
  left: 410px;
+ border-radius: 15px;
 }
 .drink:nth-child(4){
  width: 260px;
