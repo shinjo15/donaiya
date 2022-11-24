@@ -1,7 +1,7 @@
 class RecommendationsController < ApplicationController
   def new
     @food = Recommendation.new
-    @foods = Recommendation.all
+    @foods = Recommendation.order(created_at: :DESC)
   end
 
   def create
