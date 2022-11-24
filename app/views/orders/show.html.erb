@@ -45,6 +45,7 @@
     <div class="col-9"><p class="middle"><%= @order.payment_amount %>円</p></div>
   </div>
   <div class="row w-100">
-    <p class="w-100 title-margin text-right"><%= link_to "削除", order_path(@order.id), method: :delete, class: "btn-delete", "data-confirm" => "本当に削除しますか？"  %></p>
+     <p class="w-50 title-margin text-center"><%= link_to "戻る", homes_admin_top_path, class: "btn-color" %></p>
+    <p class="w-50 title-margin text-center"><%= link_to "削除", order_path(@order.id), method: :delete, class: "btn-delete", "data-confirm" => "本当に削除しますか？"  %></p>
   </div>
 </section>
