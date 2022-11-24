@@ -1,7 +1,7 @@
 class NoticesController < ApplicationController
   def new
     @notice = Notice.new
-    @notices = Notice.all
+    @notices = Notice.order(created_at: :DESC)
   end
 
   def create

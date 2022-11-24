@@ -1,7 +1,7 @@
 class TakeoutItemsController < ApplicationController
   def new
     @takeout_item = TakeoutItem.new
-    @takeout_items = TakeoutItem.all
+    @takeout_items = TakeoutItem.order(created_at: :DESC)
   end
 
   def create
