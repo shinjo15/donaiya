@@ -1,4 +1,5 @@
 class TakeoutItemsController < ApplicationController
+   before_action :admin_login, only: [:new, :create, :edit, :update, :destroy]
   def new
     @takeout_item = TakeoutItem.new
     @takeout_items = TakeoutItem.order(created_at: :DESC)
@@ -43,5 +44,11 @@ class TakeoutItemsController < ApplicationController
 
   def takeout_items_params
     params.require(:takeout_item).permit(:image, :takeout_name, :tax_price, :takeout_details, :is_active)
+  end
+    # --------------ログインしていない場合ルートパスに戻る----------------
+  def admin_login
+    unless signed_in?
+      redirect_to root_path
+    end
   end
 end

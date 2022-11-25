@@ -1,4 +1,6 @@
 class NoticesController < ApplicationController
+before_action :admin_login, only: [:new, :create, :edit, :update, :destroy,]
+
   def new
     @notice = Notice.new
     @notices = Notice.order(created_at: :DESC)
@@ -38,5 +40,11 @@ class NoticesController < ApplicationController
 
   def notices_params
     params.require(:notice).permit(:title, :notice_details)
+  end
+  # --------------ログインしていない場合ルートパスに戻る----------------
+  def admin_login
+    unless signed_in?
+      redirect_to root_path
+    end
   end
 end

@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :admin_login, only: [:show, :destroy]
+
   def new
     @order = Order.new
   end
@@ -41,5 +43,11 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).permit(:cart_id, :name, :telephone_number, :receipt_datetime, :request, :payment_amount)
+  end
+   # --------------ログインしていない場合ルートパスに戻る----------------
+  def admin_login
+    unless signed_in?
+      redirect_to root_path
+    end
   end
 end

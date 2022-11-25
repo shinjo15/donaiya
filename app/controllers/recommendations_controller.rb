@@ -1,4 +1,6 @@
 class RecommendationsController < ApplicationController
+  before_action :admin_login, only: [:new, :create, :edit, :update, :destroy]
+
   def new
     @food = Recommendation.new
     @foods = Recommendation.order(created_at: :DESC)
@@ -37,5 +39,11 @@ class RecommendationsController < ApplicationController
 
   def recommendations_params
     params.require(:recommendation).permit(:image, :name, :tax_price, :details)
+  end
+   # --------------ログインしていない場合ルートパスに戻る----------------
+  def admin_login
+    unless signed_in?
+      redirect_to root_path
+    end
   end
 end
