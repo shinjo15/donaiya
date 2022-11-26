@@ -19,6 +19,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.save!
     @cart_items = current_cart.cart_items.all
+    binding.pry
     @cart_items.each do |cart_item|
       order_detail = OrderDetail.new
       order_detail.order_id = @order.id

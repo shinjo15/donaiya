@@ -33,6 +33,8 @@
  画面遷移図
  管理者: https://drive.google.com/file/d/1Pn4CjlhpKV5ENcG8Y0xKwqvUaH7X7x62/view?usp=sharing
  ユーザー: https://drive.google.com/file/d/1Zem9tBZukAsDTjqlLekYGcoELGTQlNfT/view?usp=sharing
+ テスト仕様書
+ https://docs.google.com/spreadsheets/d/1LcPo789lLSLDwYvm6Hf73hE7r5JWKBRO/edit?usp=sharing&ouid=114128949387974350632&rtpof=true&sd=true
 
 ## 開発環境
 - OS：windows(windows10)
@@ -42,5 +44,8 @@
 - IDE：Cloud9
 
 ## 使用素材
- 使用検討中です
+ぱくたそ
+ https://www.pakutaso.com/
+O-DAN
+ http://o-dan.net/ja/
 
