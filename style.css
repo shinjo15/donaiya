@@ -234,3 +234,96 @@ body{
   margin: 0 100px;
   color: #fff;
 }
+/*tekeoutでも使用する*/
+.takeout-title {
+  padding: 150px 0 0 0;
+  display: flex;
+	align-items: center;
+}
+.takeout-title:before,
+.takeout-title:after {
+  content: "";
+  flex-grow: 1;
+  height: 2.5px;
+  background: #fff;
+}
+.takeout-title:before{
+  margin:0 2em 0 0;
+}
+.takeout-title:after{
+  margin:0 0 0 2em;
+}
+.tekeout-conteiner{
+  width: 1280px;
+  padding-bottom: 200px;
+  margin: 0 auto;
+  border-bottom: 1.5px solid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.takeout-item{
+  width: 400px;
+}
+.takeout-image{
+  width: 400px;
+  height: 400px;
+}
+.nabe-image{
+  background-image: url('img/F8CC9570-0988-42A2-89E9-1B20C14C8FD2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.niku-image{
+  background-image: url('img/4F73F333-6B6B-4308-ACEB-859BFDA7342F.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.korea-image{
+  background-image: url('img/0AF95AB2-9332-46D4-90DA-3774DC10B2C4.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.takeout-text{
+  padding: 20px;
+  text-align: center;
+}
+
+/*---------------------access----------------*/
+.access-content{
+  width: 100%;
+  position: relative;
+}
+.access-back{
+  width: 66%;
+  height: 100px;
+  margin: 100px auto 100px 0;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.access-title{
+  text-align: center;
+   padding: 100px 0;
+   color: #fff;
+}
+.access-conteiner{
+  max-width: 1280px;
+  padding-bottom: 250px;
+  margin: 0 auto;
+}
+.access-conteiner p{
+  padding-top: 50px;
+  color: #fff;
+  text-align: center;
+}
+.access-image{
+  width: 480px;
+  height: 360px;
+  margin: 100px auto;
+  background-image: url('img/0AF95AB2-9332-46D4-90DA-3774DC10B2C4.jpg');
+  background-size: cover;
+  background-position: center;
+}
