@@ -7,6 +7,10 @@
 h1,h2,h3,h4,nav,p,label,li{
  font-family: 'Noto Serif JP', serif;
 }
+a{
+  color: #fff;
+  text-decoration: none;
+}
  /*-------------font-size----------------*/
 .title-lv1{
   font-size: 75px;
@@ -67,7 +71,7 @@ body{
 }
 
 /*---------------------about------------*/
-.about{
+#about{
   display: flex;
   position: relative;
   padding: 0 0 200px 0;
@@ -126,7 +130,7 @@ body{
   background-color: #fff;
   height: 2680px;
 }
-.menu-content{
+#menu{
   margin: 0 100px;
   height: 2500px;
   border-bottom: 2px solid #000;
@@ -230,7 +234,7 @@ body{
   background-position: center;
 }
 /*---------------------takeout----------------*/
-.takeout-content{
+#takeout{
   margin: 0 100px;
   color: #fff;
 }
@@ -290,7 +294,7 @@ body{
 }
 
 /*---------------------access----------------*/
-.access-content{
+#access{
   width: 100%;
   position: relative;
 }
@@ -326,4 +330,18 @@ body{
   background-image: url('img/0AF95AB2-9332-46D4-90DA-3774DC10B2C4.jpg');
   background-size: cover;
   background-position: center;
+}
+
+/*---------------------footer----------------*/
+.footer-content{
+  background-color: #560D04;
+  text-align: center;
+  padding: 100px 0 150px 0;
+  color: #fff;
+}
+.footer-content p{
+  padding:40px 0 0 0;
+}
+.footer-content p:first-child{
+  padding: 0;
 }
