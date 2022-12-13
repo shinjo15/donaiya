@@ -49,7 +49,8 @@ body{
   display: flex;
 }
 .top-menu{
-  width: 640px;
+  max-width: 640px;
+  width: 33.33%;
   color: #fff;
 }
 .top-text{
@@ -63,7 +64,8 @@ body{
   margin-top: 0px;
 }
 .top-image{
-  width: 1280px;
+  max-width: 1280px;
+  width: 66.66%;
   height: 1080px;
   background-image: url('img/06E6B9DF-843A-4F75-A797-FC6B13FC41B9.jpg');
   background-size: cover;
@@ -72,6 +74,8 @@ body{
 
 /*---------------------about------------*/
 #about{
+  max-width: 1920px;
+  width: 100%;
   display: flex;
   position: relative;
   padding: 0 0 200px 0;
@@ -85,8 +89,8 @@ body{
   color: #fff;
   position: absolute;
   top: 100px;
-  left: 250px;
-  z-index: 1;
+  left: 13%;
+  z-index: 3;
 }
 .about-subtitle{
   padding-top: 35px;
@@ -95,7 +99,7 @@ body{
   padding: 60px 20px;
 }
 .about-back{
-  margin: 0 0 0 500px;
+  margin: 0 0 0 26%;
   height: 740px;
   width: 100%;
   background-color: #444;
@@ -103,26 +107,29 @@ body{
   position: relative;
 }
 .about-image-box-shop{
-  width: 480px;
+  max-width: 480px;
+  width: 100%;
   height: 540px;
   position: absolute;
   top: -30px;
-  left: 600px;
+  left: 65.10%;
   background-image: url('img/FE84995F-494D-4C3D-8F00-2ACD25B21936.jpg');
   background-size: cover;
   background-position: center;
+  z-index: 1;
 }
 .about-image-box-food{
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 300px;
   background-color: #aaa;
   position: absolute;
   top: 400px;
-  left: 330px;
+  left: 51.04%;
   background-image: url('img/B88440DC-6CE9-4F1F-882A-E8D915758230.jpg');
   background-size: cover;
   background-position: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 /*---------------------menu----------------*/
@@ -238,11 +245,18 @@ body{
   max-width: 560px;
   height: 420px;
   margin: 90px 10px auto;
-  background-image: url('img/E3CCDCC9-9ABA-4435-8FEC-EEFE5EF8E7ED.jpg');
   background-size: cover;
   background-position: center;
 }
-
+.menu-card-box-image .nabe{
+  background-image: url('img/E3CCDCC9-9ABA-4435-8FEC-EEFE5EF8E7ED.jpg');
+}
+.menu-card-box-image .niku{
+  background-image: url('img/7408F17D-188A-44CE-9ABE-7161B981CCD7.jpg');
+}
+.menu-card-box-image .korea{
+  background-image: url('img/6DF1DD5E-0877-4095-AC24-2B399704F14C.jpg');
+}
 /*---------------------takeout----------------*/
 #takeout{
   margin: 0 100px;
@@ -268,7 +282,7 @@ body{
   margin:0 0 0 2em;
 }
 .tekeout-conteiner{
-  width: 1280px;
+  max-width: 1280px;
   padding-bottom: 200px;
   margin: 0 auto;
   border-bottom: 1.5px solid;
@@ -325,16 +339,16 @@ body{
 }
 .access-conteiner{
   max-width: 1280px;
-  padding-bottom: 250px;
+  padding: 0 100px 250px 100px;
+  text-align: center;
   margin: 0 auto;
+  color: #fff;
 }
 .access-conteiner p{
   padding-top: 50px;
-  color: #fff;
-  text-align: center;
 }
 .access-image{
-  width: 480px;
+  max-width: 480px;
   height: 360px;
   margin: 100px auto;
   background-image: url('img/0AF95AB2-9332-46D4-90DA-3774DC10B2C4.jpg');
@@ -356,38 +370,64 @@ body{
 .mn-sub-title{
   text-align: center;
 }
+.mn-box-title{
+  text-align: center;
+  padding-bottom: 15px;
+}
 .mn-box{
   width: 33.33%;
 }
-.mn-box-image{
+.mn-box-image-nabe,.mn-box-image-niku{
   border-right: 2px solid #fff;
   box-sizing: border-box;
 }
-.mn-box:nth-child(3) .mn-box-image{
-  border-right: 0px;
-}
 .mn-image{
-  width: 540px;
+  max-width: 540px;
+  width: 95%;
   height: 405px;
   margin: 100px auto 0 auto;
   background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+.mn-box-image-nabe .mn-image:first-of-type{
+  background-image: url('img/E3CCDCC9-9ABA-4435-8FEC-EEFE5EF8E7ED.jpg');
+}
+.mn-box-image-nabe .mn-image:nth-of-type(3){
+  background-image: url('img/F8CC9570-0988-42A2-89E9-1B20C14C8FD2.jpg');
+}
+.mn-box-image-niku .mn-image:nth-of-type(2){
+  background-image: url('img/7408F17D-188A-44CE-9ABE-7161B981CCD7.jpg');
+}
+.mn-box-image-niku .mn-image:nth-of-type(4){
+  background-image: url('img/1248F1C9-0BB2-4B25-9E6C-CB06557075A8.jpg');
+}
+.mn-box-image-korea .mn-image:first-of-type{
+  background-image: url('img/6DF1DD5E-0877-4095-AC24-2B399704F14C.jpg');
+}
+.mn-box-image-korea .mn-image:nth-of-type(3){
+  background-image: url('img/24186204-A542-4A3F-B8C9-46B4289AA467.jpg');
 }
 .mn-text-dark{
-  width: 440px;
-  height: 330px;
-  margin-top: 100px;
+  max-width: 440px;
+  width: 85%;
+  padding: 40px 20px;
   margin: 100px auto 0 auto;
   border: 1.5px solid #fff;
   box-sizing: border-box;
 }
 .mn-text-gray{
-  width: 440px;
-  height: 330px;
-  margin-top: 100px;
+  max-width: 440px;
+  width: 85%;
+  padding: 40px 20px;
   margin: 100px auto 0 auto;
   background-color: #444;
+  box-sizing: border-box;
 }
-
+.top-link-padding{
+  padding: 0 0 200px 0;
+  text-align: center;
+}
 /*---------------------footer----------------*/
 .footer-content{
   background-color: #560D04;
