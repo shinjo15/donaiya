@@ -36,7 +36,58 @@ a{
   font-size: 20px;
   letter-spacing: .25em;
 }
-
+@media screen and (max-width: 1280px){
+.title-lv1{
+  font-size: 50px;
+  letter-spacing: .4em;
+}
+.title-lv2{
+  font-size: 40px;
+  letter-spacing: .4em;
+}
+.title-lv3{
+  font-size: 28px;
+  letter-spacing: .4em;
+}
+.title-lv4{
+  font-size: 24px;
+  letter-spacing: .25em;
+}
+.text-lv1{
+  font-size: 24px;
+  letter-spacing: .25em;
+}
+.text-lv2{
+  font-size: 18px;
+  letter-spacing: .15em;
+}
+}
+@media screen and (max-width: 480px){
+.title-lv1{
+  font-size: 40px;
+  letter-spacing: .4em;
+}
+.title-lv2{
+  font-size: 32px;
+  letter-spacing: .4em;
+}
+.title-lv3{
+  font-size: 24px;
+  letter-spacing: .4em;
+}
+.title-lv4{
+  font-size: 20px;
+  letter-spacing: .25em;
+}
+.text-lv1{
+  font-size: 20px;
+  letter-spacing: .15em;
+}
+.text-lv2{
+  font-size: 15px;
+  letter-spacing: .15em;
+}
+}
 ul{
   list-style: none;
 }
@@ -71,12 +122,28 @@ body{
   background-size: cover;
   background-position: center;
 }
-
+/*------------@media screen and (max-width: 768px)------------*/
+@media screen and (max-width: 1280px){
+  .top-content{
+    display: block;
+  }
+  .top-menu{
+    max-width: 768px;
+    width: 100%;
+  }
+  .top-text li{
+  margin-top: 30pt;
+}
+  .top-image{
+    width: 100%;
+    height: 530px;
+    margin: 65px 0 0 0 ;
+  }
+}
 /*---------------------about------------*/
 #about{
   max-width: 1920px;
   width: 100%;
-  display: flex;
   position: relative;
   padding: 0 0 200px 0;
 }
@@ -84,19 +151,25 @@ body{
   width: 520px;
   border: 3px solid #fff;
   box-sizing: border-box;
-  text-align: center;
-  padding-top: 35px;
   color: #fff;
   position: absolute;
   top: 100px;
   left: 13%;
   z-index: 3;
 }
+.about-title{
+  padding-top: 35px;
+  text-align: center;
+}
 .about-subtitle{
   padding-top: 35px;
+  text-align: center;
+}
+.br-tb{
+  display: none;
 }
 .about-text{
-  padding: 60px 20px;
+  padding: 60px 20px 60px 30px;
 }
 .about-back{
   margin: 0 0 0 26%;
@@ -131,16 +204,57 @@ body{
   background-position: center;
   z-index: 2;
 }
-
+/*------------@media screen and (max-width: 768px)------------*/
+@media screen and (max-width: 1280px){
+  #about{
+    height: 1470px;
+  }
+ .about-box{
+   width: 400px;
+   left: 50px;
+ }
+ .about-subtitle{
+  padding-top: 35px;
+}
+.br-tb{
+  display: block;
+}
+.about-text{
+  padding: 35px 20px 35px 30px;
+}
+.about-back{
+  margin: 0 0 0 200px;
+}
+.about-image-box-shop{
+  width: 47%;
+  max-width: 600px;
+  max-height: 450px;
+  min-width: 400px;
+  min-height: 300px;
+  top: 840px;
+  left: 35.8%;
+}
+.about-image-box-food{
+  width: 29%;
+  max-width: 360px;
+  max-height: 270px;
+  min-width: 240px;
+  min-height: 180px;
+  top: 1090px;
+  left: 13%;
+}
+}
 /*---------------------menu----------------*/
 .menu-back{
   width: 100%;
-  background-color: #fff;
   height: 2700px;
+  background-color: #fff;
+  padding-bottom: 100px;
+  z-index: 0;
 }
 #menu{
-  margin: 0 100px;
   height: 2350px;
+  margin: 0 100px;
 }
 .menu-link-padding{
   text-align: center;
@@ -174,19 +288,36 @@ body{
   width: 66%;
   margin: 100px auto;
 }
+@media screen and (max-width: 1420px){
+  .content-box-text{
+    width: 80%;
+  }
+  .content-box-text .text-lv1{
+    font-size: 24px;
+  }
+}
 /*---*/
+/*------------@media screen and (max-width: 768px)------------*/
+@media screen and (max-width: 1280px){
+  #menu{
+    margin: 0 50px;
+  }
+  .content-box-text{
+    width: 80%;
+    margin: 50px auto;
+}
+}
 /*---------------------menuのcard----------------*/
 .menu-conteiner{
-  width: 100%;
   position: relative;
-  z-index: 0;
 }
+/*-------shadow--------*/
 .menu-shadow{
   width: 100%;
   max-width: 1080px;
   height: 600px;
   background-color: #444;
-  z-index: -1;
+  z-index: 0;
 }
 .nabe-shadow{
   position: absolute;
@@ -203,6 +334,8 @@ body{
   top: 1170px;
   left: 30px;
 }
+/*-------card-position--------*/
+
 .menu-card{
   max-width: 1080px;
   height: 600px;
@@ -210,26 +343,30 @@ body{
   border: 1.5px solid;
   box-sizing: border-box;
   display: flex;
+  z-index: 1;
 }
 .card-nabe{
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 .card-meat{
   position: absolute;
   top: 570px;
-  right: 0px;
+  right: 0;
   background-color: #111;
   color: #fff;
 }
 .card-korea{
   position: absolute;
   top: 1140px;
-  left: 0px;
+  left: 0;
 }
+/*---------------*/
+
 .menu-card-text{
   width: 40%;
+  min-width: 250px;
 }
 .menu-card-title{
   text-align: center;
@@ -240,11 +377,13 @@ body{
 }
 .menu-card-box-image{
   width: 60%;
+  padding: 30px 20px 60px 20px;
+  box-sizing: border-box;
 }
 .menu-card-iamge{
   max-width: 560px;
   height: 420px;
-  margin: 90px 10px auto;
+  margin: 0 auto;
   background-size: cover;
   background-position: center;
 }
@@ -256,6 +395,34 @@ body{
 }
 .menu-card-box-image .korea{
   background-image: url('img/6DF1DD5E-0877-4095-AC24-2B399704F14C.jpg');
+}
+/*------------@media screen and (max-width: 768px)------------*/
+@media screen and (max-width: 1280px){
+  .menu-card{
+    display: block;
+    height: 700px;
+  }
+  .menu-card-text{
+  width: 100%;
+}
+.menu-card-title{
+  padding: 30px 0 0 0;
+}
+  .menu-card-detail{
+  padding: 30px 20px;
+}
+.menu-card-detail .text-lv2{
+  font-size: 18px;
+  letter-spacing: .15em;
+}
+.menu-card-box-image{
+  width: 100%;
+}
+.menu-card-iamge{
+  max-width: 448px;
+  height: 336px;
+  margin: 0 auto;
+}
 }
 /*---------------------takeout----------------*/
 #takeout{
