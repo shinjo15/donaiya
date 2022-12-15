@@ -140,6 +140,11 @@ body{
     margin: 65px 0 0 0 ;
   }
 }
+@media screen and (max-width: 501px){
+  .top-text{
+     padding: 50px 0 0 50px;
+  }
+}
 /*---------------------about------------*/
 #about{
   max-width: 1920px;
@@ -244,6 +249,32 @@ body{
   left: 13%;
 }
 }
+
+/*------------@media screen and (max-width: 501px)------------*/
+@media screen and (max-width: 501px){
+  .about-back{
+    margin: 0;
+  }
+  .about-box{
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .about-image-box-shop{
+    max-width: 400px;
+    height: 300px;
+    top: 840px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .about-image-box-food{
+    max-width: 400px;
+    height: 270px;
+    top: 1140px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 /*---------------------menu----------------*/
 .menu-back{
   width: 100%;
@@ -299,7 +330,11 @@ body{
 /*---*/
 /*------------@media screen and (max-width: 768px)------------*/
 @media screen and (max-width: 1280px){
+  .menu-back{
+    height: 100%;
+  }
   #menu{
+    height: 100%;
     margin: 0 50px;
   }
   .content-box-text{
@@ -398,9 +433,21 @@ body{
 }
 /*------------@media screen and (max-width: 768px)------------*/
 @media screen and (max-width: 1280px){
-  .menu-card{
+    .menu-card{
     display: block;
     height: 700px;
+  }
+  .card-nabe{
+    position: static;
+  }
+   .card-meat{
+    position: static;
+  }
+   .card-korea{
+    position: static;
+  }
+  .menu-shadow{
+    display: none;
   }
   .menu-card-text{
   width: 100%;
@@ -484,6 +531,28 @@ body{
   text-align: center;
 }
 
+/*------------@media screen and (max-width: 768px)------------*/
+@media screen and (max-width: 1280px){
+  .tekeout-conteiner{
+    display: block;
+  }
+  .takeout-item{
+    margin: 30px auto 0 auto;
+  }
+}
+
+/*------------@media screen and (max-width: 501px)------------*/
+@media screen and (max-width: 501px){
+  #takeout{
+    margin: 0 50px;
+  }
+  .takeout-item{
+    max-width: 400px;
+  }
+  .takeout-image{
+    max-width: 400px;
+  }
+}
 /*---------------------access----------------*/
 #access{
   width: 100%;
@@ -523,6 +592,15 @@ body{
   background-position: center;
 }
 
+/*------------@media screen and (max-width: 501px)------------*/
+@media screen and (max-width: 501px){
+  .access-conteiner{
+    padding: 0 50px 250px 50px;
+  }
+  .access-image{
+    max-width: 300px;
+  }
+}
 /*---------------------menu.html----------------*/
 .mn-title{
   margin: 300px 0 150px 0;
