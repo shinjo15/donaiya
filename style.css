@@ -151,6 +151,7 @@ body{
   width: 100%;
   position: relative;
   padding: 0 0 200px 0;
+  box-sizing: border-box;
 }
 .about-box{
   width: 520px;
@@ -174,7 +175,7 @@ body{
   display: none;
 }
 .about-text{
-  padding: 60px 20px 60px 30px;
+  padding: 60px 30px 60px 40px;
 }
 .about-back{
   margin: 0 0 0 26%;
@@ -281,6 +282,7 @@ body{
   height: 2700px;
   background-color: #fff;
   padding-bottom: 100px;
+  box-sizing: border-box;
   z-index: 0;
 }
 #menu{
@@ -412,7 +414,7 @@ body{
 }
 .menu-card-box-image{
   width: 60%;
-  padding: 30px 20px 60px 20px;
+  padding: 50px 20px 60px 20px;
   box-sizing: border-box;
 }
 .menu-card-iamge{
@@ -587,9 +589,6 @@ body{
   max-width: 480px;
   height: 360px;
   margin: 100px auto;
-  background-image: url('img/0AF95AB2-9332-46D4-90DA-3774DC10B2C4.jpg');
-  background-size: cover;
-  background-position: center;
 }
 
 /*------------@media screen and (max-width: 501px)------------*/
@@ -673,6 +672,20 @@ body{
   padding: 0 0 200px 0;
   text-align: center;
 }
+
+/*------------@media screen and (max-width: 1280px)------------*/
+@media screen and (max-width: 1280px){
+  .mn-conteiner{
+    display: block;
+  }
+  .mn-box{
+    width: 100%;
+    margin-top: 100px;
+  }
+  .mn-box-image-nabe,.mn-box-image-niku{
+    border-right: 0px;
+  }
+}
 /*---------------------footer----------------*/
 .footer-content{
   background-color: #560D04;
@@ -681,7 +694,7 @@ body{
   color: #fff;
 }
 .footer-content p{
-  padding:40px 0 0 0;
+  padding:30px 0 0 0;
 }
 .footer-content p:first-child{
   padding: 0;
